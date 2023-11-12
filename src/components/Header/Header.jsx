@@ -1,19 +1,18 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import './header.css'
 import { logo, userIcon } from '../../assets/images/ImagePaths'
 import { Container, Row } from 'reactstrap'
 import { NavLink, useNavigate, Link } from 'react-router-dom';
 import { motion } from 'framer-motion'
 import { useSelector } from 'react-redux'
-import { toast } from 'react-toastify';
 
 const navLinks = [
 	{
-		path: 'home',
+		path: 'pages/home',
 		display: 'Home'
 	},
 	{
-		path: 'projects',
+		path: 'pages/projects',
 		display: 'Projects'
 	},
 	{
