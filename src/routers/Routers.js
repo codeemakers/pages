@@ -15,7 +15,7 @@ const Routers = () => {
 		<Routes>
 
 			{/* <Route exact path='/pages' element={<Navigate to={`/home`} />} /> */}
-			<Route path={`/pages`} element={<Home />} />
+			<Route exact path={`${process.env.REACT_ROUTE_BASENAME}`} element={<Home />}/>
 
 
 

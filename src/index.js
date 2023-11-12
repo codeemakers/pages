@@ -13,7 +13,7 @@ import 'react-toastify/dist/ReactToastify.css';
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename="/pages">
+    <BrowserRouter basename={`${process.env.REACT_ROUTE_BASENAME}`} >
       <Provider store={store}>
         <ToastContainer
           theme="dark"
