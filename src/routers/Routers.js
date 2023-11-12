@@ -14,16 +14,16 @@ const Routers = () => {
 	return ( 
 		<Routes>
 			
-			<Route path='/' element={<Navigate to='home'/>} />
-			<Route path='home' element={<Home/>} />
-			<Route path='shop' element={<Shop/>} />
-			<Route path='projects' element={<AllProjects/>} />
-			<Route path='support' element={<Support/>} />
-			<Route path='contact' element={<Contact/>} />
-			<Route path='shop/:id' element={<ProductDetails/>} />
-			<Route path='shop/download/:id' element={<Download/>} />
-			<Route path='cart' element={<Cart/>} />
-			<Route path='checkout' element={<Checkout />} />
+			<Route path='/' element={<Navigate to='/home'/>} />
+			<Route path='/home' element={<Home/>} />
+			<Route path='/shop' element={<Shop/>} />
+			<Route path='/projects' element={<AllProjects/>} />
+			<Route path='/support' element={<Support/>} />
+			<Route path='/contact' element={<Contact/>} />
+			<Route path='/shop/:id' element={<ProductDetails/>} />
+			<Route path='/shop/download/:id' element={<Download/>} />
+			<Route path='/cart' element={<Cart/>} />
+			<Route path='/checkout' element={<Checkout />} />
 			
 		</Routes>
 	);
