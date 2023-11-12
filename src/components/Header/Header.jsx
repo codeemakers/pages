@@ -8,11 +8,11 @@ import { useSelector } from 'react-redux'
 
 const navLinks = [
 	{
-		path: 'pages/home',
+		path: 'home',
 		display: 'Home'
 	},
 	{
-		path: 'pages/projects',
+		path: 'projects',
 		display: 'Projects'
 	},
 	{
