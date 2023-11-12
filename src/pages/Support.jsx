@@ -59,7 +59,7 @@ const Support = () => {
 							<h3 className="text-transform-none ls0">5.	Will I get a refund?</h3>
 							<p>Yes, Check the  
 								<span>
-									<a target="_blank" rel="nofollow" href="https://codeshoppy.com/shop/refundpolicy/">
+									<a target="_blank" rel="noreferrer" href="https://codeshoppy.com/shop/refundpolicy/">
 										Refund Policy 
 									</a>
 								</span>
@@ -95,7 +95,7 @@ const Support = () => {
 						<div className=" ">
 							<h3 className="text-transform-none ls0">10.	Can I get the Full Project Report / Documentation?</h3>
 							<p>Yes. You will get the well documented report Check Here 
-							<a target="_blank" rel="nofollow" href="https://codeshoppy.com/Sample%20Full%20Document.pdf">Sample Report</a>  </p>
+							<a target="_blank" rel="noreferrer" href="https://codeshoppy.com/Sample%20Full%20Document.pdf">Sample Report</a>  </p>
 						</div>
 						
 						<div className=" ">
@@ -107,7 +107,7 @@ const Support = () => {
 						<div className=" ">
 							<h3 className="text-transform-none ls0">12.How to buy the project?</h3>
 							<p>Buy from official link 
-							<a target="_blank" rel="nofollow" href="https://codeshoppy.com/shop/"> Code Shoppy </a> through any of the online payment method available</p>
+							<a target="_blank" rel="noreferrer" href="https://codeshoppy.com/shop/"> Code Shoppy </a> through any of the online payment method available</p>
 						</div>
 				
 					</div>	
@@ -116,7 +116,7 @@ const Support = () => {
 			</div>
 
 			<div className="center">
-				<a rel="nofollow" target="_blank" href="https://wa.me/919629754500" > 
+				<a rel="noreferrer" target="_blank" href="https://wa.me/919629754500" > 
 					<motion.button whileHover={{scale:1.1}} className="buy__btn">
 						Still Having Doubts?
 					</motion.button>

@@ -14,10 +14,8 @@ const Routers = () => {
 	return (
 		<Routes>
 
-			{/* <Route exact path='/pages' element={<Navigate to={`/home`} />} /> */}
-			<Route exact path={`/pages`} element={<Home />}/>
-
-
+			{/* <Route exact path='/' element={<Navigate to={`/home`} />} /> */}
+			<Route exact path='/' element={<Home />}/>
 
 			<Route path='/shop' element={<Shop />} />
 			<Route path='/projects' element={<AllProjects />} />

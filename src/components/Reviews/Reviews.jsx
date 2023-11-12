@@ -14,7 +14,7 @@ import { qoute } from '../../assets/images/ImagePaths'
 const Reviews = () => {
 
 	const [reviewData, setReviewData] = useState();
-	const api = process.env.REACT_SHEET_TEST_API
+	const api = 'https://script.google.com/macros/s/AKfycbxDuXQxkeunux_OPKetbS4ud1GT_UomBtnm8BjLWI5lZn6Uqyx0PJHc144NzwqAYjIJ/exec'
 
 	const getReviews = async () => {
 
