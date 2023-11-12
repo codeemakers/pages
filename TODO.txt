@@ -1,0 +1,24 @@
+{  }
+
+- Responsive for - How it works, What you will get.
+
+- Going page for writing review - https://youtu.be/F3BLz8gYVik
+- displaying the google reviews - https://www.launch2success.com/guide/display-google-reviews-website-2017/
+- CRUD in Sheets with react - https://youtu.be/WJ36yvuWMO0?si=PmT0a-id90F8_Crv
+
+- Doing all the stuffs like privacy policy, refund, terms and condition & etc.
+
+- Add Display Feature Product in Admin module and filter by feature
+
+- Change the my account page in header icon
+
+- Navigate docs to Drive
+
+- Reviews
+
+- Check all the pages is helmet applied
+
+- Update whatsapp number. and link to the respective pages
+
+
+Starts With --- Make custom header in shop page, change router, for custom project

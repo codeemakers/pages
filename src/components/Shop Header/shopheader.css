@@ -1,0 +1,67 @@
+.cont {
+	width: 100%;
+	background-color: var(--hero-bg);
+	color: whitesmoke;
+}
+.cont h1{
+	color: whitesmoke;
+}
+.sec {
+	max-width: 1520px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	padding: 40px 15px;
+	justify-content: space-between;
+	gap: 2px;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	gap: 2px;
+	height: 12;
+	padding: 15px 10px;
+	cursor: pointer;
+	border-radius: 6px;
+	background: transparent;
+}
+.logo:hover {
+	background: var(--hero-bg);
+	transition: 300;
+	color: var(--primary-color);
+}
+/* 1520px , 1280px  */
+.logo img{
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.logo h1{
+	padding-left: 6px;
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+.inputSection {
+	height: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	flex: 1;
+	padding-left: 10px;
+}
+.input {
+	height: 100%;
+	width: 100%;
+	border-radius: 6px;
+	padding: 20px 20px;
+	color: black;
+	border: 1px transparent;
+	outline: none;
+}
+.input:focus-visible {
+	border: black;
+	transition: 200;
+}

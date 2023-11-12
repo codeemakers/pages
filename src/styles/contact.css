@@ -1,0 +1,63 @@
+#slider { 
+	background: url('../assets/images/contact.png') center center / cover no-repeat;
+	height: 460px; 
+}
+
+.div2{
+	position: absolute; top: 50%; width: 100%; padding-top: 0px; padding-bottom: 0px; margin-top: -112.927px; opacity: 1;
+}
+
+#slider h3{
+	text-align: left;
+}
+#slider a{
+	text-align: center;
+	font-weight: 600;
+	color: var(--primary-color);
+}
+#slider i{
+	padding-right: 20px;
+}
+
+#content {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.div3{
+	text-align: center;
+}
+.div3 h3{
+	font-weight: 600;
+	color: var(--primary-color);
+}
+
+#content h3{
+	text-transform: none !important;
+}
+.dark {
+	padding-top: 50%;
+}
+#content iframe {
+	border:2px var(--primary-color) solid;
+}
+
+@media only screen and (max-width:576px) {
+
+	#slider {
+		padding-left: 20px;
+		padding-right: 20px;
+		margin-top: 30px;
+		height: 230px;
+		background: none;
+	}
+	#content, .promo {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.promo h6{
+		font-size: 0.9rem;
+	}
+	.promo h2{
+		font-size: 1.7rem;
+	}
+}

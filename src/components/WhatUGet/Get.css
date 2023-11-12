@@ -1,0 +1,99 @@
+.section{
+	/* background: url('demos/seo/images/sections/4.png') no-repeat center top; */
+	background-size: cover;
+	padding-top: 50px;
+}
+.section.container.t2.t1 h3{
+	color: var(--primary-color);
+	text-transform: none !important;
+	font-size: 36px;
+}
+.pricing { position: relative; }
+
+.pricing [class^=col-] {
+	padding: 0;
+	margin-top: 20px;
+}
+.section-pricing{
+	padding: 0 !important;
+}
+
+
+/* Pricing Boxes
+-----------------------------------------------------------------*/
+
+.pricing-box {
+	position: relative;
+	border: 1px solid rgba(0,0,0,0.075);
+	border-radius: 3px;
+	text-align: center;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+	background-color: #F9F9F9;
+}
+
+
+/* Pricing Boxes - Title
+-----------------------------------------------------------------*/
+
+.pricing-title {
+	padding: 15px 0;
+	background-color: #F9F9F9;
+	border-radius: 3px 3px 0 0;
+	text-shadow: 1px 1px 1px #FFF;
+	border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.pricing-title h3 {
+	margin: 0;
+	letter-spacing: 1px;
+	font-size: 24px;
+	font-weight: bold;
+	color: #444;
+}
+
+/* Pricing Boxes - Features
+-----------------------------------------------------------------*/
+
+.pricing-features { border-bottom: 1px solid rgba(0,0,0,0.075); }
+
+.pricing-features ul {
+	margin: 0;
+	padding: 15px 15px;
+	list-style: none;
+	text-align: left;
+}
+
+.pricing-features li {
+	padding: 6px 0;
+	font-size: 16px;
+	color: #444;
+}
+.pricing-features i {
+	color: #ffac33;
+	font-weight: bold;
+	font-size: 18px;
+}
+.pricing-features strong {
+	padding-left: 10px;
+	font-size: 16px;
+	color: #444;
+}
+
+
+/* Pricing Boxes - Best Price
+-----------------------------------------------------------------*/
+
+.pricing-box.best-price {
+	background-color: #F9F9F9;
+	box-shadow: 0 0 8px rgba(0,0,0,0.1);
+	z-index: 10;
+}
+
+.pricing-box.best-price { margin: -20px -1px 0 -1px; }
+
+.pricing-box.best-price .pricing-title {
+	background-color: #F9F9F9;
+	padding: 20px 0;
+}
+
+

@@ -1,0 +1,33 @@
+
+.doc-img img {
+	height: 50px;
+	width: 50px;
+}
+
+.media-body .text {
+	text-align: center;
+	font-weight: 600;
+	margin-top: 10px;
+}
+
+.m-content {
+	display: none;
+}
+
+.tab__content h6{
+	line-height: 30px;
+	text-align: justify;
+	font-size: 17px;
+}
+
+@media only screen and (max-width: 576px) {
+	
+	.m-content {
+		display: block;
+	}
+
+	.d-content {
+		display: none;
+	}
+
+}
