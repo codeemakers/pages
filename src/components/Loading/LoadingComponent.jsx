@@ -1,7 +1,7 @@
 import React from 'react'
 import { Col } from 'reactstrap'
 
-const LoadingPage = () => {
+const LoadingComponent = () => {
   return (
 	
 	<Col lg='12' className="text-center">
@@ -11,4 +11,4 @@ const LoadingPage = () => {
   )
 }
 
-export default LoadingPage
+export default LoadingComponent

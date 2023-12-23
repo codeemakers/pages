@@ -5,8 +5,8 @@ import MyAccordion from './MyAccordion';
 import { motion } from 'framer-motion'
 
 const FAQ = () => {
-	const [data1, setData1] = useState(set1);
-	const [data2, setData2] = useState(set2);
+	const [data1] = useState(set1);
+	const [data2] = useState(set2);
   return (
 
 	<div className='top-div'>
@@ -38,7 +38,7 @@ const FAQ = () => {
 			{/* https://wa.me/919566731404 */}
 			<center>
 				<motion.button whileHover={{scale:1.1}} className='dgtBtn'>
-					<a href="https://wa.me/918825700348" target="_blank">
+					<a href="https://wa.me/918825700348" rel="noreferrer" target="_blank">
 						Still Having Doughts?
 					</a> 
 				</motion.button>

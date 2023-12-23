@@ -1,12 +1,38 @@
 /* Responsive Styling */
-@media only screen and (max-width:992px) {
-	.clock__wrapper{
-		justify-content: center;
-	}
-	.clock__data h1{
-		font-size: 1.1rem !important;
-	}
-	.clock__data h5{
-		font-size: 0.9rem !important;
-	}
+@media only screen and (max-width: 992px) {
+  .clock__wrapper {
+    justify-content: center;
+  }
+  .clock__data h1 {
+    font-size: 1.1rem !important;
+  }
+  .clock__data h5 {
+    font-size: 0.9rem !important;
+  }
+}
+
+/* Scroll To Top Button Styling */
+
+#progress {
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  height: 70px;
+  width: 70px;
+  display: none;
+  place-items: center;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 35px;
+  color: #001a2e;
 }

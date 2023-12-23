@@ -47,4 +47,7 @@
 		justify-content:space-evenly;
 		align-items: center;
 	}
+	.sections .buy__btn {
+		padding: 0px 0px;
+	}
  }

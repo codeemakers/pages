@@ -30,22 +30,37 @@ import productImg25 from "../images/wireless-03.png";
 
 const products = [
   {
-    id: "01",
-    productName: "Stone and Beam Westview ",
+    id: "G1101",
+    productName: "Stone and Beam Westview",
     imgUrl: productImg01,
     category: "sofa",
     price: 193,
-    shortDesc:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur iure quas illo voluptates labore tempore!",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut consectetur distinctio repudiandae quia quam quos, quas illo, iusto, necessitatibus odio veniam exercitationem quis voluptatibus debitis laboriosam! Esse debitis obcaecati blanditiis at impedit quibusdam!",
-    reviews: [
+
+    abstract: 'In an era where flexibility and mobility are paramount, the Bike Rental Management System Application emerges as a game-changer in the urban transportation. This innovative application redefines the way individuals interact with bike rentals, seamlessly connecting users with a multitude of vendors through a unified, user-friendly platform. The proposed application presents a unique multi-vendor approach, allowing various bike rental vendors to showcase their offerings. Vendors can effortlessly post their bikes, and handle bookings, offering users a diverse array of options. Users experience unparalleled convenience in discovering bikes for rent. Through an intuitive interface, they can explore a wide selection of bikes, view detailed specifications, and seamlessly book their preferred ride. This streamlined process ensures a hassle-free experience from selection to confirmation. Navigating the city becomes effortless as users can locate bikes but also reach the vendor’s precise location using integrated Google Maps.',
+
+    objectives: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio nostrum accusantium iste, voluptas cumque provident! Consequatur officiis animi rem tempore voluptate cumque hic similique aperiam ut',
+
+    swreq: 'Front End: HTML5, CSS3, Bootstrap\nEnd: PHP, MYSQL\nControl End: Angular Java Script',
+
+    proposed: 'The proposed Bike Rental Management System introduces a comprehensive digital platform that revolutionizes the bike rental process. Utilizing advanced technologies, user-friendly interfaces, and robust backend systems, the proposed system ensures seamless interactions between vendors and users, enhancing efficiency, transparency, and overall user satisfaction.',
+
+    modules: [
       {
-        rating: 4.7,
-        text: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        desc: 'Login\nApprove Vendor\nView User Details',
+        name: 'Admin'
       },
+      {
+        desc: 'Register\nLogin\nCreate Bike\nUpdate/Delete Bike\nUpdate Google geo Location\nUpdate Booking request\nView Feedback & Rating\nMy Profile',
+        name: 'Vendor'
+      },
+      {
+        desc: 'Register\nLogin\nSearch Bike\nSearch City, area wise\nView Google Geo location\nMake Booking Request\nView Booking Status\nPost Feedback & Rating\nMy Profile',
+        name: 'User'
+      }
     ],
-    avgRating: 4.5,
+
+    documentLink: 'drive.com',
+    youtubeLink: 'https://www.youtube.com/embed/mB8ajdvRnC0?si=KQaQ5s2vm_ffVBfu',
   },
 
   {

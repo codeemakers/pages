@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, lazy, Suspense } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import { Col, Container, Row } from "reactstrap";
 import { heroImg, counterImg } from '../assets/images/ImagePaths'
@@ -8,12 +8,12 @@ import { motion } from 'framer-motion'
 import Services from "../components/Services/Services";
 import HowIt from "../components/HowItWorks/how";
 import WhatYouGet from '../components/WhatUGet/Get'
-import FAQ from "../components/FAQ/FAQ";
 import ProductList from "../components/UI/ProductsList";
 import Clock from "../components/UI/Clock";
 import products from '../assets/data/products'
-import Reviews from "../components/Reviews/Reviews";
 import CustomProject from "../components/Custom/CustomProject";
+
+const ShowReviews = lazy(() => import("../components/Reviews/ShowReviews"));
 
 
 const Home = () => {
@@ -22,10 +22,10 @@ const Home = () => {
   const [data, setData] = useState(products);
 
   useEffect(() => {
-    console.log(process.env.REACT_APP_SHOW_OFFER)
     const completedProducts = products.filter(item => item.category === 'chair');
     setData(completedProducts);
-  }, [products])
+    window.scrollTo(0, 0);
+  }, [])
 
   return (
 
@@ -39,10 +39,14 @@ const Home = () => {
               <div className="hero__content">
                 <p className="hero__subtitle">Get Your Stress Free Projects in {year}</p>
                 <h2>- Affordable Cost<br />- Instant Download</h2>
-                <p>Welcome to Code Maker, your go-to destination for custom projects and ready-made projects. We also offer a curated selection of completed projects available for purchase and download.</p>
-                <motion.button whileHover={{ scale: 1.1 }} className="buy__btn">
-                  <Link to='/shop'>Shop Now</Link>
-                </motion.button>
+                <p>Welcome to Code Makers, your go-to destination for custom projects and ready-made projects. We also offer a curated selection of completed projects available for purchase and download.</p>
+
+                <Link to='/shop'>
+                  <motion.button whileHover={{ scale: 1.1 }} className="buy__btn">
+                    Shop Now
+                  </motion.button>
+                </Link>
+
               </div>
             </Col>
 
@@ -69,11 +73,11 @@ const Home = () => {
       <Services />
 
       {/* Completed Projects Section RD */}
-      <section className='trending__products mt-0 pt-0'>
+      <section className='trending__products mt-0 pt-0 mb-0'>
         <Container className="mt-0">
           <Row>
             <Col lg='12' className="text-center">
-              <h2 className="section__title">Completed Projects</h2>
+              <h2 className="section__title mb-4">Completed Projects</h2>
             </Col>
             <ProductList data={data} />
           </Row>
@@ -82,7 +86,7 @@ const Home = () => {
 
       {/* Limited Offer Section RD */}
       {
-        process.env.REACT_APP_SHOW_OFFER==="true" ?
+        process.env.REACT_APP_SHOW_OFFER === "true" ?
           <section className="timer__count">
             <Container>
               <Row>
@@ -95,12 +99,12 @@ const Home = () => {
                   <Clock />
 
                   <motion.button whileHover={{ scale: 1.1 }} className="buy__btn store__btn">
-                    <Link to={'/shop'}>Visit Store</Link>
+                    <Link to={'/shop'} className="">Visit Store</Link>
                   </motion.button>
                 </Col>
 
                 <Col lg='6' md='12' className="text-end counter__img">
-                  <img src={counterImg} alt="Product Image" />
+                  <img src={counterImg} alt="Product Img" />
                 </Col>
               </Row>
             </Container>
@@ -110,10 +114,12 @@ const Home = () => {
 
       {/* Reviews Section */}
       <center>
-        <h2 className="section__title mb-3">Our Google Reviews</h2>
-        <p className='fs-5'>What Students Says</p>
+        <h2 className="section__title mb-2 pt-4">Our Google Reviews</h2>
+        <p className='fs-5 mb-3'>What Students Says</p>
       </center>
-      <Reviews />
+      <Suspense fallback={<div>.</div>}>
+        <ShowReviews />
+      </Suspense>
 
     </Helmet>
 

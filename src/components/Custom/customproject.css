@@ -1,194 +1,201 @@
 .suggestion {
-    padding: 1em 2em;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  padding: 1em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .suggestion-wrapper {
-    padding: 2em;
-    max-width: 1100px;
-    margin: auto;
-    background-color: #1553c8;
-	height: 430px;
-    color: #fff;
-    border-radius: 10px;
+  padding: 2em;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #1553c8;
+  height: 400px;
+  color: #fff;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 .seection {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 .seection {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 .seection:last-child .widget:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 .seection:first-child .widget:first-child {
-    margin-top: 0;
+  margin-top: 0;
 }
 
-@media only screen and (max-width: 600px){
-	.suggestion .widget {
-		flex-direction: column-reverse;
-		text-align: center;
-	}
+@media only screen and (max-width: 600px) {
+  .suggestion .widget {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
 }
 .suggestion .widget {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 .widget {
-    margin: 0;
-    padding: 0;
-    line-height: unset;
+  margin: 0;
+  padding: 0;
+  line-height: unset;
 }
 .widget {
-    line-height: 1.4;
+  line-height: 1.4;
 }
 .widget {
-    margin: 30px 0;
-    _margin: 0 0 10px;
+  margin: 30px 0;
+  _margin: 0 0 10px;
 }
-.content-outer, .header-outer, .tabs-outer, .main-outer, .main-inner, .footer-outer, .post, .comments, .widget, .date-header, .inline-ad {
-    position: relative;
-    min-height: 0;
-    _position: static;
-    _height: 1%;
+.content-outer,
+.header-outer,
+.tabs-outer,
+.main-outer,
+.main-inner,
+.footer-outer,
+.post,
+.comments,
+.widget,
+.date-header,
+.inline-ad {
+  position: relative;
+  min-height: 0;
+  _position: static;
+  _height: 1%;
 }
 
-@media only screen and (max-width: 600px)
-{
-	.suggestion h2 {
-		font-size: 25px;
-	}
+@media only screen and (max-width: 600px) {
+  .suggestion h2 {
+    font-size: 25px;
+  }
 }
 .suggestion h2 {
-    font-size: 45px;
-    font-weight: 600;
-    line-height: 1.4;
-    margin-top: 1em;
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1em;
 }
 
-h1, h2, h3, h4 {
-    margin: 0;
-    position: relative;
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  position: relative;
 }
 
 h2 {
-    display: block;
-    font-size: 1.5em;
-    margin-block-start: 0.83em;
-    margin-block-end: 0.83em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
 }
 
-@media only screen and (max-width: 600px)
-{
-	.suggestion .text-btn {
-		margin: 2em auto 0;
-	}
+@media only screen and (max-width: 600px) {
+  .suggestion .text-btn {
+    margin: 2em auto 0;
+  }
 }
 .suggestion .text-btn {
-    background-color: #fcb449;
-    border-radius: 21px;
-    padding: 12px;
-    width: 160px;
-    text-align: center;
-    margin: 2em 0 0;
-    display: block;
+  background-color: #fcb449;
+  border-radius: 21px;
+  padding: 12px;
+  width: 160px;
+  text-align: center;
+  margin: 2em 0 0;
+  display: block;
+  font-weight: 600;
+  border: 0;
+  font-size: 1.1rem;
 }
 
- a {
-    text-decoration: none;
-    cursor: pointer;
-    color: inherit;
-	font-style: bold;
-	font-size: 1rem;
-}
-
-@media only screen and (max-width: 600px)
-{
-	.suggestion .txt {
-		width: 100%;
-	}
+@media only screen and (max-width: 600px) {
+  .suggestion .txt {
+    width: 100%;
+  }
 }
 .suggestion .txt {
-    width: 50%;
+  width: 50%;
 }
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 img {
-    overflow-clip-margin: content-box;
-    overflow: clip;
+  overflow-clip-margin: content-box;
+  overflow: clip;
 }
 
-@media only screen and (max-width: 600px)
-{
-	.suggestion .pic {
-		width: 100%;
-	}
+@media only screen and (max-width: 600px) {
+  .suggestion .pic {
+    width: 100%;
+  }
 }
 .suggestion .pic {
-    width: 37%;
+  width: 37%;
 }
 
-.suggestion{
-	padding:1em 2em;
-	}
-	.suggestion-wrapper{
-	padding:2em;
-	max-width:1100px;
-	margin:auto;
-	background-color:#1553c8;
-	color:#fff;
-	border-radius:10px;
-	}
-	.suggestion .widget{
-	display:flex;
-	justify-content:center;
-	}
-	.suggestion .txt{
-	width:50%;
-	}
-	.suggestion .pic{
-	width:37%;
-	}
-	.suggestion h2{
-	font-size:45px;
-	font-weight:600;
-	line-height:1.4;
-	margin-top:1em;
-	}
-	.suggestion .text-btn{
-	background-color:#fcb449;
-	border-radius:21px;
-	padding:12px;
-	width:160px;
-	text-align:center;
-	margin:2em 0 0;
-	display:block;
-	}
-	@media only screen and (max-width:600px){
-	.suggestion .widget{
-	flex-direction:column-reverse;
-	text-align:center;
-	}
-	.suggestion .txt{
-	width:100%;
-	}
-	.suggestion .pic{
-	width:100%;
-	}
-	.suggestion h2{
-	font-size:25px;
-	}
-	.suggestion .text-btn{
-	margin:2em auto 0;
-	}
-	}
+.suggestion {
+  padding: 1em 2em;
+}
+.suggestion-wrapper {
+  padding: 2em;
+  max-width: 1100px;
+  margin: auto;
+  background-color: #1553c8;
+  color: #fff;
+  border-radius: 10px;
+}
+.suggestion .widget {
+  display: flex;
+  justify-content: center;
+}
+.suggestion .txt {
+  width: 50%;
+}
+.suggestion .pic {
+  width: 37%;
+}
+.suggestion h2 {
+  font-size: 45px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-top: 1em;
+}
+.suggestion .text-btn {
+  background-color: #fcb449;
+  border-radius: 21px;
+  padding: 12px;
+  width: 160px;
+  text-align: center;
+  margin: 2em 0 0;
+  display: block;
+}
+@media only screen and (max-width: 600px) {
+  .suggestion .widget {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .suggestion .txt {
+    width: 100%;
+  }
+  .suggestion .pic {
+    width: 100%;
+  }
+  .suggestion h2 {
+    font-size: 25px;
+  }
+  .suggestion .text-btn {
+    margin: 2em auto 0;
+  }
+}

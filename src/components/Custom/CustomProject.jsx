@@ -1,7 +1,10 @@
 import React from 'react'
 import './customproject.css'
+import { motion } from 'framer-motion'
 
 const CustomProject = () => {
+
+	var text = 'Hi Code Makers, I want a custom project to be developed?';
 
 	return (
 
@@ -12,7 +15,14 @@ const CustomProject = () => {
 					<div className="widget Image" data-version="1" id="Image15">
 						<div className="txt">
 							<h2>Have any project in mind</h2>
-							<a className="text-btn" href="#">Give Project</a>
+
+							<a href={`${process.env.REACT_APP_WA_LINK}${text}`}
+								rel="noreferrer" target='_blank'
+							>
+								<motion.button whileHover={{ scale: 1.1 }} className='text-btn'>
+									Give Project
+								</motion.button>
+							</a>
 						</div>
 						<div className="pic">
 							<img alt="Have any project in mind" id="Image15_img" src="https://cdni.iconscout.com/illustration/premium/thumb/presentation-4489889-3832825.png" />

@@ -1,33 +1,90 @@
-
 .doc-img img {
-	height: 50px;
-	width: 50px;
+  height: 50px;
+  width: 50px;
 }
 
 .media-body .text {
-	text-align: center;
-	font-weight: 600;
-	margin-top: 10px;
+  text-align: center;
+  font-weight: 600;
 }
 
 .m-content {
-	display: none;
+  display: none;
 }
 
-.tab__content h6{
-	line-height: 30px;
-	text-align: justify;
-	font-size: 17px;
+.tab__content h6,
+i {
+  line-height: 29px;
+  text-align: justify;
+  font-size: 16px;
 }
+
+.faq__img {
+  height: 300px;
+  width: 500px;
+}
+
+.module__name {
+  font-weight: 600;
+  width: fit-content;
+  border-bottom: 2px solid var(--primary-color);
+  padding: 0;
+}
+
+.module__desc {
+  display: flex;
+  align-items: center;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Youtube Video TAB ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+.youtube-responsive-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+}
+
+.youtube-responsive-container iframe,
+.youtube-responsive-container object,
+.youtube-responsive-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+embed,
+iframe {
+  max-width: 100%;
+}
+
+.perfmatters-lazy.loaded,
+.perfmatters-lazy img.loaded,
+.perfmatters-lazy[data-was-processed="true"] {
+  opacity: 1;
+  transition: opacity 500ms;
+}
+
+.perfmatters-lazy:not(picture),
+.perfmatters-lazy img {
+  opacity: 0;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ Scrolling Modal ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 @media only screen and (max-width: 576px) {
-	
-	.m-content {
-		display: block;
-	}
+  .m-content {
+    display: block;
+  }
 
-	.d-content {
-		display: none;
-	}
-
+  .d-content {
+    display: none;
+  }
 }

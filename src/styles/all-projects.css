@@ -43,16 +43,44 @@
 .promo{
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 }
 
-.promo .cont {
+.promo .content {
+	padding: 20px 20px;
+	width: 100%;
+	height: 160px;
+	background-color: var(--hero-bg);
 	text-align: center;
+	justify-items: center;
 	font-weight: 600;
 }
-.promo .cont h6{
+.promo .content h6{
 	text-transform: uppercase;
 	color: black;
 }
-.promo .cont h2 span{
+.promo .content h2 span{
 	color: var(--primary-color);
 }
+
+/* ====================== Responsive Styling ==================================== */
+
+@media only screen and (max-width: 576px) {
+
+	.promo {
+		padding: 0px 0px;
+	}
+	.promo .content .uppercase {
+		font-size: 0.8rem;
+	}
+
+	.promo .content h2 {
+		font-size: 1.2rem;
+	}
+	.promo .content .buy__btn {
+		padding: 0px 0px;
+	}
+	#content {
+		margin-top: 5px;
+	}
+ }

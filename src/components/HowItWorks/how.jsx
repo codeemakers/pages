@@ -10,11 +10,13 @@ const HowIt = () => {
 					<div className="c1 heading-block nobottomborder center divcenter mb-0 clearfix">
 					</div>
 					<div className="deskContent">
+						
 						<center className='t2'>
 							<h2 className="section__title mb-5">How It Works</h2>
 						</center>
 
 						<div className="row">
+							
 							<div className="col-sm-4 col-xs-4" >
 								<div className="works">
 									<div className="worksnum">
@@ -52,18 +54,19 @@ const HowIt = () => {
 
 						</div>
 
-
-						<div className="row" >
+						<div className="row mt-3" >
+							
 							<div className="col-sm-4"  >
 								<div className="works">
 									<div className="worksnum">
 										<h1>4</h1>
 									</div>
 									<div className="worksdesc">
-										<p>GET DELIVERY<br /><span>- Instant Download from Website <br />-  Mail or Whatsapp</span></p>	</div>
+										<p>GET DELIVERY<br /><span>- Instant Download from Whatsapp <br />-  Mail or Github</span></p>	</div>
 
 								</div>
 							</div>
+
 							<div className="col-sm-4" >
 								<div className="works">
 									<div className="worksnum">
@@ -71,11 +74,12 @@ const HowIt = () => {
 									</div>
 									<div className="worksdesc">
 										<p>REMOTE SUPPORT<br />
-											<span>Get Remote Support by Splashtop or Anydesk (Max 2 Configuration)</span>
+											<span>Get Remote Support by Anydesk<br/>(Max 2 Configuration)</span>
 										</p>
 									</div>
 								</div>
 							</div>
+
 							<div className="col-sm-4">
 								<div className="works">
 									<div className="worksnum">
@@ -87,7 +91,9 @@ const HowIt = () => {
 								</div>
 							</div>
 						</div>
-						<div className="row" >
+						
+						<div className="row mt-3" >
+							
 							<div className="col-sm-4" >
 								<div className="works">
 									<div className="worksnum">
@@ -98,6 +104,7 @@ const HowIt = () => {
 											<span >- Live Demo Explantion <br />- Recording Session</span></p>	</div>
 								</div>
 							</div>
+
 							<div className="col-sm-4" >
 								<div className="works">
 									<div className="worksnum">
@@ -108,17 +115,19 @@ const HowIt = () => {
 											<span>- Get Whatsapp & Call Support<br />- Till project completion. </span></p></div>
 								</div>
 							</div>
+
 							<div className="col-sm-4" >
 								<div className="works">
 									<div className="worksnum">
 										<h1>9</h1>
 									</div>
 									<div className="worksdesc">
-										<p >ISSUE - RAISE TICKET<br /><span>- Critical and Functionality fix only.</span></p>
+										<p >ISSUE<br /><span>- Critical and Functionality fix only.</span></p>
 
 									</div>
 								</div>
 							</div>
+							
 						</div>
 
 					</div>
@@ -131,7 +140,7 @@ const HowIt = () => {
 
 						<div className="row"  >
 							<div className="col-lg-12 col-sm-12 " >
-								<img className="img-fluid" alt="Code Maker How it Works"
+								<img className="img-fluid" alt="Code Makers How it Works"
 									src={howit} />
 							</div>
 						</div>

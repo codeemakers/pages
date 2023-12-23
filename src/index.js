@@ -12,8 +12,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
+
   <React.StrictMode>
-    <BrowserRouter basename='/pages' >
+    <BrowserRouter basename={process.env.REACT_APP_ROUTENAME} >
       <Provider store={store}>
         <ToastContainer
           theme="dark"

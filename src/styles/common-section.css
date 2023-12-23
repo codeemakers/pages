@@ -11,6 +11,7 @@
 .common__section h1{
 	color: #fff;
 	font-weight: 600;
+	font-size: 3.4rem;
 }
 
 /* Responsive Styling */
@@ -20,5 +21,16 @@
 	}
 	.common__section h1{
 		font-size: 1.4rem;
+	}
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 576px) {
+	.common__section {
+		padding: 70px 0px;
+	}
+	.common__section h1{
+		font-size: 1.8rem;
+		line-height: 150%;
 	}
 }

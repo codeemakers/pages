@@ -12,7 +12,7 @@ const Clock = () => {
 
 	const countDown = ()=> {
 		
-		const dest = new Date(process.env.REACT_APP_DATE).getTime()
+		const dest = new Date(process.env.REACT_APP_OFFERDATE).getTime()
 		interval = setInterval(()=> {
 
 			const now = new Date().getTime()

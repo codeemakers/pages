@@ -1,27 +1,81 @@
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
+import { lazy, Suspense } from 'react';
+import LoadingComponent from '../components/Loading/LoadingComponent';
+import RefundPolicy from '../pages/Policy/RefundPolicy';
+import DeliveryPolicy from '../pages/Policy/DeliveryPolicy';
+import TCPolicy from '../pages/Policy/TcPolicy';
 
-import Home from '../pages/Home';
-import Shop from '../pages/Shop';
-import Cart from '../pages/Cart';
-import ProductDetails from '../pages/ProductDetails';
-import Checkout from '../pages/Checkout';
-import Download from '../pages/Download';
-import AllProjects from '../pages/AllProjects';
-import Contact from '../pages/Contact';
-import Support from '../pages/Support';
+const Home = lazy(() => import("../pages/Home"));
+const Shop = lazy(() => import("../pages/Shop"));
+const Cart = lazy(() => import("../pages/Cart"));
+const ProductDetails = lazy(() => import("../pages/ProductDetails"));
+const Checkout = lazy(() => import("../pages/Checkout"));
+const Download = lazy(() => import("../pages/Download"));
+const AllProjects = lazy(() => import("../pages/AllProjects"));
+const Contact = lazy(() => import("../pages/Contact"));
+const Support = lazy(() => import("../pages/Support"));
 
 const Routers = () => {
 	return (
 		<Routes>
 
 			{/* <Route exact path='/' element={<Navigate to={`/home`} />} /> */}
-			<Route exact path='/' element={<Home />}/>
 
-			<Route path='/shop' element={<Shop />} />
-			<Route path='/projects' element={<AllProjects />} />
-			<Route path='/support' element={<Support />} />
-			<Route path='/contact' element={<Contact />} />
-			<Route path='/shop/:id' element={<ProductDetails />} />
+			<Route exact path='/' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<Home />
+				</Suspense>
+			} />
+
+			<Route path='/shop' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<Shop />
+				</Suspense>
+			} />
+
+			<Route path='/projects' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<AllProjects />
+				</Suspense>
+			} />
+
+			<Route path='/support' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<Support />
+				</Suspense>
+			} />
+
+			<Route path='/contact' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<Contact />
+				</Suspense>
+			} />
+
+			<Route path='/shop/:id' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<ProductDetails />
+				</Suspense>
+			} />
+
+			<Route path='/refundpolicy' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<RefundPolicy />
+				</Suspense>
+			} />
+
+			<Route path='/deliverypolicy' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<DeliveryPolicy />
+				</Suspense>
+			} />
+
+			<Route path='/terms-conditions' element={
+				<Suspense fallback={<LoadingComponent />}>
+					<TCPolicy />
+				</Suspense>
+			} />
+
+			{/* // */}
 			<Route path='/shop/download/:id' element={<Download />} />
 			<Route path='/cart' element={<Cart />} />
 			<Route path='/checkout' element={<Checkout />} />

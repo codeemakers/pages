@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import LoadingPage from '../Loading/LoadingPage';
 import { NavLink } from 'react-router-dom';
 
 import Table from '@mui/material/Table';
@@ -18,70 +17,72 @@ const TitleCard = () => {
 	const [rows, setRows] = useState([]);
 
 	useEffect(() => {
-		if (loading == true) {
+		if (loading === true) {
 			setRows(products);
 			setLoading(false);
 		}
-	}, []);
+	}, [loading]);
 
-	if (loading) {
-		return <LoadingPage />;
-	}
-
-	return(
+	return (
 
 		<>
 
 			<TableContainer component={Paper}>
-				<Table sx={{ minWidth: 650 }} className='table-responsive'  aria-label="a dense table">
+				<Table sx={{ maxWidth: 650 }} className='table-responsive' aria-label="a dense table">
 
 					<TableHead>
 						<TableRow>
-							<TableCell align="center">
+							<TableCell
+								align="center"
+								style={{ minWidth: 30 }}
+							>
 								<h5 className='fw-bold'>S.No</h5>
 							</TableCell>
-							<TableCell align="center">
+							<TableCell align="left">
 								<h5 className='fw-bold'>Project Name</h5>
 							</TableCell>
-							<TableCell align="center">
+							{/* <TableCell align="center">
 								<h5 className='fw-bold'>Project Type</h5>
-							</TableCell>
+							</TableCell> */}
 						</TableRow>
 					</TableHead>
-					
+
 					<TableBody>
-						
+
 						{
 							rows
-              				.map((row, index) => {
+								.map((row, index) => {
 									return (
-										<TableRow hover role="checkbox" tabIndex={-1}>
-											
-											<TableCell key={row.id} align='center'>
-												<h6>{index+1}</h6>
+										<TableRow
+											key={row.id} hover role="checkbox"
+											tabIndex={-1}
+										>
+
+											<TableCell align='center'>
+												<h6>{index + 1}</h6>
 											</TableCell>
 
-											<TableCell key={row.id} align='center'>
+											<TableCell align='left'>
 												<NavLink to={`/shop/${row.id}`}>
 													<h6>{row.productName}</h6>
 												</NavLink>
 											</TableCell>
 
-											<TableCell key={row.id} align='center'>
+											{/* <TableCell key={row.id} align='center'>
 												<h6>{row.category}</h6>
-											</TableCell>
+											</TableCell> */}
 
 										</TableRow>
 									);
 								}
-							)
+								)
 						}
 
 					</TableBody>
 
 				</Table>
 			</TableContainer>
-  
+
 
 		</>
 

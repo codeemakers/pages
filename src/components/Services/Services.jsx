@@ -12,7 +12,7 @@ const Services = () => {
 
         <center className="title">
           <h2 className="section__title mb-3">Features</h2>
-          <p className='fs-5'>Get Latest Android & PHP Projects Ideas 2023</p>
+          <p className='sub__heading'>Get Latest Android & PHP Projects Ideas 2023</p>
         </center>
         {
           serviceData.map((item, index) => (

@@ -1,24 +1,29 @@
-{  }
-
-- Responsive for - How it works, What you will get.
+	{ 
+		Policies,
+		Support Responsive, //
+		Reviews Responsive, //
+		How it Works Padding, //
+		Headers, //
+		Show Stars according to Sheet
+		App Logo & Website Tab Logo,
+		Loader Component,
+		What you will Get Modal,
+		Project Images,
+		Compare and check content of whole website,
+		Search Component Clickable,
+		Check all the pages is helmet applied,
+		Update whatsapp number and link to the respective pages,
+	}
 
 - Going page for writing review - https://youtu.be/F3BLz8gYVik
 - displaying the google reviews - https://www.launch2success.com/guide/display-google-reviews-website-2017/
 - CRUD in Sheets with react - https://youtu.be/WJ36yvuWMO0?si=PmT0a-id90F8_Crv
 
-- Doing all the stuffs like privacy policy, refund, terms and condition & etc.
 
-- Add Display Feature Product in Admin module and filter by feature
+https://youtu.be/xsVTqzratPs?si=JyNpH6RQIMJExjhV -- Complete SEO Course for Beginners
 
-- Change the my account page in header icon
+https://youtu.be/hJ7Rg1821Q0?si=AUdiC_Hhnwr4Uoyy -- Optimize the Images and loads them
 
-- Navigate docs to Drive
+To remove the commits of env in github - git filter-branch --index-filter "git rm -rf --cached --ignore-unmatch .env"
 
-- Reviews
-
-- Check all the pages is helmet applied
-
-- Update whatsapp number. and link to the respective pages
-
-
-Starts With --- Make custom header in shop page, change router, for custom project
+Project Description Comprises - [ Abstarct, Existing System, Proposed System, Hardware and Software requirements, Modules ]

@@ -14,7 +14,7 @@ const Shop = () => {
 	useEffect(()=>{
 		const completedProducts = products.filter(item => item.category === 'sofa' || 'chair' || 'Android');
 		setProductsData(completedProducts);
-	}, [products])
+	}, [])
 
 	const handleFilter = e => {
 
@@ -45,6 +45,10 @@ const Shop = () => {
 
 		setProductsData(searchedProduct)
 	};
+
+	useEffect(() => {
+		window.scrollTo(0, 0);
+	}, []);
 
 	return (
 

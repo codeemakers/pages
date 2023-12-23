@@ -1,39 +1,39 @@
 import React from 'react'
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import './media-desc.css'
 
-const DocumentDownload = ({name}) => {
-
-	const { id } = useParams();
+const DocumentDownload = ({product}) => {
 
 	return (
 
 		<>
 	
-			<div class="w3eden mt-5">
-				<div class="link-template-default border-dark card mb-2">
-					<div class="card-body">
-						<div class="media d-flex justify-content-between align-items-center">
-							<div class="mr-3 img-48 doc-img">
-								<img data-lazyloaded="1" src="https://shoppy.b-cdn.net/wp-content/plugins/download-manager/assets/file-type-icons/doc.png" class="wpdm_icon entered litespeed-loaded" alt="Icon" data-src="https://shoppy.b-cdn.net/wp-content/plugins/download-manager/assets/file-type-icons/doc.png" data-ll-status="loaded" />
+			<div className="w3eden mt-4">
+				<div className="link-template-default border-dark card mb-2">
+					<div className="card-body">
+						<div className="media d-flex justify-content-between align-items-center">
+							<div className="mr-3 img-48 doc-img">
+								<img data-lazyloaded="1" src="https://shoppy.b-cdn.net/wp-content/plugins/download-manager/assets/file-type-icons/doc.png" className="wpdm_icon entered litespeed-loaded" alt="Icon" data-src="https://shoppy.b-cdn.net/wp-content/plugins/download-manager/assets/file-type-icons/doc.png" data-ll-status="loaded" />
 								<noscript>
-									<img class="wpdm_icon" alt="Icon" src="https://shoppy.b-cdn.net/wp-content/plugins/download-manager/assets/file-type-icons/doc.png" />
+									<img className="wpdm_icon" alt="Icon" src="https://shoppy.b-cdn.net/wp-content/plugins/download-manager/assets/file-type-icons/doc.png" />
 								</noscript>
 							</div>
-							<div class="media-body">
-								<h4 class="package-title fs-4 fw-bold mb-1">
-									<NavLink to={`/shop/download/${id}`}>
-										{name}
+							<div className="media-body">
+								<h4 className="package-title fs-4 fw-bold mb-1">
+									<NavLink to={`/shop/download/${product.id}`}>
+										{product.productName}
 									</NavLink>
 								</h4>
-								<div class="text-muted text-small text">
-									<i class="ri-file-copy-line"></i> 1 file(s)
+								<div className="text-muted text-small text">
+									<i className="ri-file-copy-line"></i> 1 file(s)
 								</div>
 							</div>
-							<div class="ml-3">
+							<div className="ml-3">
 								<a
-									class="btn btn-success btn-lg"
-									// v-bind:download="file.name"
+									className="btn btn-success btn-lg"
+									href={product.documentLink}
+									target='_blank'
+									rel="noreferrer"
 								>
 									Download
 								</a>

@@ -1,0 +1,129 @@
+/* Re Usable Code Section */
+section {
+  padding: 60px 0px;
+}
+
+.sectionn {
+  padding: 60px 0px;
+}
+
+.grid {
+  display: grid;
+  gap: 9rem;
+}
+
+.grid-two-column {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.testi-container {
+  max-width: 140rem;
+  margin: 0 auto;
+}
+
+.swiper {
+  width: 80%;
+  height: 80%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  max-width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  border: 0.2rem solid #f3f4ff;
+}
+
+.swiper-client-msg {
+  padding: 3rem 6rem;
+  background: #fff;
+  border-radius: 1rem;
+  text-align: left;
+  box-shadow: var(--shadow);
+  position: relative;
+}
+
+.swiper-client-msg::before {
+  content: "";
+  position: absolute;
+  bottom: -5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 2.5rem solid #fff;
+  border-color: transparent;
+  border-top-color: #f3f4ff;
+}
+
+.swiper-client-msg div::before {
+  /* content: '\&#xF13B'; */
+  content: "\f10d";
+  position: absolute;
+  top: 0;
+  left: 2rem;
+  font-size: 3rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ced3ff;
+}
+
+.swiper-client-msg div::after {
+  content: "\f10e";
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+  font-size: 3rem;
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #ced3ff;
+}
+
+.swiper-client-msg p,
+.client-data-details p {
+  color: black;
+  font-size: 1rem;
+}
+
+.swiper-client-data {
+  align-items: center;
+  margin-top: 1rem;
+  gap: 3.2rem;
+}
+
+/* Responsive Styling */
+@media only screen and (max-width: 576px) {
+
+  .swiper-client-data {
+    margin-bottom: 40px;
+  }
+
+  .swiper-client-data img {
+    height: 50px;
+    width: 50px;
+  }
+
+  .client-data-details p, .swiper-client-msg p {
+    font-size: 0.8rem;
+  }
+
+  .swiper-client-msg {
+    padding: 20px 20px;
+  }
+
+  .swiper-client-msg div::after {
+    content: "";
+  }
+  .swiper-client-msg div::before {
+    content: "";
+  }
+}

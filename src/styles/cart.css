@@ -1,12 +1,50 @@
-.table tr td img{
-	width: 70px !important;
-	height: 70px !important;
-	object-fit: cover;
+.table tr td img {
+  width: 70px !important;
+  height: 70px !important;
+  object-fit: cover;
 }
-td i{
-	cursor: pointer;
+td i {
+  cursor: pointer;
 }
 
-td, th{
-	color: var(--primary-color);
+td,
+th {
+  color: var(--primary-color);
+}
+
+.policy-section {
+  padding: 10px 60px;
+  margin-top: 2.5rem;
+}
+
+.policy-section .hed:after {
+  content: "";
+  display: block;
+  margin: 0 0;
+  width: 8%;
+  padding-top: 5px;
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.policy-section h6,
+h5 {
+  font-size: 1.1rem;
+  text-align: justify;
+  line-height: 180%;
+}
+
+@media only screen and (max-width: 576px) {
+  .policy-section {
+    padding: 10px 20px;
+    margin-top: 1.5rem;
+  }
+
+  .policy-section h6,
+  h5 {
+    text-align: start;
+  }
+
+  .policy-section .hed {
+    font-size: 1.2rem;
+  }
 }

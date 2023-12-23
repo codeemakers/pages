@@ -1,0 +1,160 @@
+/* SearchComponent.css */
+
+/* Add this style to disable scroll when the search component is open */
+.no-scroll {
+  overflow: hidden;
+}
+
+.search-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999; /* Adjust the z-index to make it appear on top */
+  pointer-events: none; /* Allow clicks to pass through to elements behind the backdrop */
+}
+
+.visible {
+  pointer-events: auto; /* Enable clicks on the search container */
+}
+
+.search-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transform: translateY(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: auto;
+}
+
+.search-page.visible {
+  transform: translateY(0);
+}
+
+.search-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* Styles for the input field and clear button */
+.search-input-container {
+  position: relative;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 2rem;
+}
+
+.clear-button {
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the right distance as needed */
+  transform: translateY(-50%);
+  padding: 5px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 48px; /* Set the font size */
+  color: black;
+}
+
+/* Symbol styles */
+.clear-button::before,
+.clear-button::after {
+  content: "";
+  font-size: 48px; /* Set the font size */
+  line-height: 1; /* Ensure proper alignment */
+  position: absolute;
+  font-size: 48px;
+  left: 0;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease;
+}
+
+/* Close symbol */
+.clear-button::before {
+  content: "\00D7"; /* Close symbol (X) */
+}
+
+/* Minimize symbol */
+.clear-button::after {
+  content: "\2013"; /* Minus symbol (-) */
+  opacity: 0;
+  font-size: 48px; /* Initially hidden */
+}
+
+/* Hover effect */
+.clear-button:hover::before {
+  opacity: 0;
+}
+
+.clear-button:hover::after {
+  opacity: 1;
+}
+
+/* You can customize the styles for search results as needed */
+.search-results {
+  margin-top: 20px;
+}
+
+/* Style for the input field */
+.home-search-input {
+  position: relative;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  height: 80px;
+  border: none;
+  margin: 0px auto;
+  background-color: transparent;
+  box-shadow: none;
+  color: #333;
+  text-align: center;
+  font-weight: 600;
+  font-size: 46px;
+}
+
+/* Placeholder style */
+.home-search-input::placeholder {
+  color: #666;
+}
+
+/* Remove default styling on focus */
+.home-search-input:focus {
+  outline: none;
+}
+
+/* Optional: Add some transition for a smoother effect */
+.home-search-input {
+  transition: background-color 0.3s ease;
+}
+
+.search-info-text {
+  flex: 0 0 auto;
+  overflow: hidden;
+  margin-top: 10px;
+  text-align: center;
+  letter-spacing: 0.3px;
+  font-size: 16px;
+  line-height: 30px;
+}
+
+/* .search-info-text > span {
+  display: block;
+  transition: all 0.35s ease 0.15s;
+  -webkit-transform: translateY(-50px) translateZ(0);
+  transform: translateY(-50px) translateZ(0);
+} */

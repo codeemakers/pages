@@ -12,14 +12,14 @@ const Footer = () => {
 		<Container>
 			<Row>
 
-				<Col lg='4' className='mb-4' md='6'>
+				<Col lg='5' className='mb-4' md='6'>
 					<div className="logo">
 						<div>
-							<h1 className='text-white'>Code Maker</h1>
+							<h1 className='text-white'>Code Makers</h1>
 						</div>
 					</div>
 					<p className="footer__text mt-4">
-						We believe in Simple, Creative & Unique Project Standards & with Responsive Approach. Browse the best latest Android, PHP & Python projects that <strong>Code Maker</strong> offers.
+						We believe in Simple, Creative & Unique Project Standards & with Responsive Approach. Browse the best latest Android, PHP & Python projects that <Link to={'/'}><strong>Code Makers</strong></Link> offers.
 					</p>
 				</Col>
 
@@ -28,25 +28,25 @@ const Footer = () => {
 						<h4 className='quick__links-title'>About Us</h4>
 						<ListGroup className='mb-3'>
 							<ListGroupItem className='ps-0 border-0'>
-								<Link to='#'>Terms & Conditions</Link>
+								<Link to='/terms-conditions'>Terms & Conditions</Link>
 							</ListGroupItem>
 
 							<ListGroupItem className='ps-0 border-0'>
-								<Link to='#'>Privacy & Policy</Link>
+								<Link to='/privacypolicy'>Privacy & Policy</Link>
 							</ListGroupItem>
 
 							<ListGroupItem className='ps-0 border-0'>
-								<Link to='#'>Cancellation & Refund Policy</Link>
+								<Link to='/refundpolicy'>Cancellation & Refund Policy</Link>
 							</ListGroupItem>
 
 							<ListGroupItem className='ps-0 border-0'>
-								<Link to='#'>Delivery Policy</Link>
+								<Link to='/deliverypolicy'>Delivery Policy</Link>
 							</ListGroupItem>
 						</ListGroup>
 					</div>
 				</Col>
 
-				<Col lg='2' md='3' className='mb-2'>
+				{/* <Col lg='2' md='3' className='mb-2'>
 
 					<div className="footer__quick-links">
 						<h4 className='quick__links-title'>My Account</h4>
@@ -69,26 +69,26 @@ const Footer = () => {
 						</ListGroup>
 					</div>
 
-				</Col>
+				</Col> */}
 
-				<Col lg='3' md='4'>
+				<Col lg='4' md='4'>
 
 					<div className="footer__quick-links">
 						<h4 className='quick__links-title'>Contact Us</h4>
 						<ListGroup className='footer__contact'>
 							<ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
 								<span><i className="ri-map-pin-line"></i></span>
-								<p>#9E, Venco Staff Quatres, Baliganapalli</p>
+								<p>Code Makers, Main Road, near Almeida Estate, Baliganapalli, Hosur</p>
 							</ListGroupItem>
 
 							<ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
 								<span><i className="ri-phone-line"></i></span>
-								<p>9566731404 / 9865152810</p>
+								<p>{process.env.REACT_APP_NUMBER}</p>
 							</ListGroupItem>
 
 							<ListGroupItem className='ps-0 border-0 d-flex align-items-center gap-2'>
 								<span><i className="ri-mail-line">	</i></span>
-								<p>shivakrishnan26@gmail.com</p>
+								<p>{process.env.REACT_APP_EMAIL}</p>
 							</ListGroupItem>
 
 						</ListGroup>
@@ -98,7 +98,7 @@ const Footer = () => {
 
 				<Col lg='12'>
 					<p className="footer__copyright">
-						Copyrights © {year} All Rights Reserved by Code Maker
+						Copyrights © {year} All Rights Reserved by Code Makers
 					</p>
 				</Col>
 

@@ -5,7 +5,10 @@ import Helmet from '../components/Helmet/Helmet';
 import TitleCard from '../components/UI/TitleCard';
 import { motion } from 'framer-motion';
 
-const AllProjects = () => {
+const AllProjects = ({category}) => {
+
+	const cYear = new Date().getFullYear()
+	const pYear = new Date().getFullYear() - 1
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -15,7 +18,8 @@ const AllProjects = () => {
 
 		<Helmet title="Project Titles">
 
-			<section id="content">
+			<div id="content">
+
 				<div className="container">
 
 					<div className="row">
@@ -32,43 +36,42 @@ const AllProjects = () => {
 
 							<div className="heading-block nobottomborder center divcenter mb-0 clearfix pt1" >
 								<h3>
-									Latest Android Projects Ideas Titles 2023 2022
+									Latest {category && category} Projects Ideas {pYear} - {cYear}
 								</h3>
 							</div>
-
-
 
 							<TitleCard />
 
 						</div>
 
-
-						{/* Promo/Contact ============================================ */}
+						{/* Banner */}
 						<div className="mt-5 promo">
 
 							<div className="container">
-								<div className="cont heading-block">
+								<div className="content heading-block">
 
 									<h6 className="uppercase ls1 mb-1">
-										Download Latest Android Titles And Choice The Best
+										Filter Latest Android Projects And Choose The Best
 									</h6>
 
-									<h2 className="ls0 mt-2 mb-4">
-										Buy Projects At <span>Code Maker</span>
+									<h2 className="ls0 mt-2 mb-3">
+										Buy Projects At <span>{process.env.REACT_APP_NAME}</span>
 									</h2>
 
-									<a href="tel:+918825700348">
+									<a className='call__btn'
+										href={`tel:+91${process.env.REACT_APP_NUMBER}`}
+									>
 										<motion.button whileHover={{ scale: 1.1 }} className='buy__btn mt-0'>Call Now</motion.button>
 									</a>
 								</div>
 							</div>
 						</div>
 
-						{/* #### */}
 					</div>
+
 				</div>
 
-			</section>
+			</div>
 
 		</Helmet>
 

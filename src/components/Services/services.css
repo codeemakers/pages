@@ -35,6 +35,9 @@
 	justify-content: center;
 	padding-bottom: 20px;	
 }
+.title .sub__heading {
+	font-size: 1.2rem;
+}
 .section__title{
 	color: var(--primary-color);
 }
@@ -68,6 +71,20 @@
 	}
 	.service__item {
 		padding: 20px;
+		overflow: hidden;
 	}
+	.service__item h3 {
+		font-size: 1.2rem;
+	}
+	.service__item p {
+		font-size: 0.9rem;
+	}
+	.services .title .sub__heading {
+		font-size: 0.9rem;
+	}
+
+	/* .services {
+		padding: 0px 0.6rem;
+	} */
 }
 

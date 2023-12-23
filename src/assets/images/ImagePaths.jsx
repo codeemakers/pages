@@ -8,6 +8,8 @@ import allProjects from './allp.jpg'
 import contactImg from './contact.png'
 import qoute from './quote.png'
 import reviewGirl from './review.png'
+import user from './user.png'
+import faq from './faq.png'
 
 export {
 	logo,
@@ -19,5 +21,7 @@ export {
 	allProjects,
 	contactImg,
 	qoute,
-	reviewGirl
+	reviewGirl,
+	user,
+	faq,
 };

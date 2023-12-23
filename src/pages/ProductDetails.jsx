@@ -6,32 +6,31 @@ import Helmet from "../components/Helmet/Helmet";
 import CommonSection from "../components/UI/CommonSection";
 import ProductsList from "../components/UI/ProductsList";
 import '../styles/product-details.css'
-import { motion } from "framer-motion";
 import MediaDesc from "./Description/MediaDesc";
 
-import DocumentDownload from "./Description/DocumentDownload";
 import Description from "./Description/Description";
 import products from "../assets/data/products";
 import Reviews from "./Description/WriteReviews";
 
 const ProductDetails = () => {
 
+	const [reviewsCount, setReviewsCount] = useState();
+	const [errorMsg, setErrorMsg] = useState('');
+	const api = process.env.REACT_APP_TEST_SHEETAPI
+
 	const [tab, setTab] = useState('desc')
 
 	const { id } = useParams();
 
 	const product = products.find(item => item.id === id);
-	const link = 'https://www.youtube.com/embed/mB8ajdvRnC0?si=p-SQRM1WthHWm8tn'
 
 	const {
 		imgUrl,
 		productName,
 		price,
-		avgRating,
 		category,
-		reviews,
-		description,
-		shortDesc,
+		objectives,
+		youtubeLink
 	} = product
 
 	const relatedProd = products.filter((item) => item.category === category);
@@ -40,32 +39,46 @@ const ProductDetails = () => {
 		window.scrollTo(0, 0);
 	}, [product]);
 
+
+	const getReviews = async () => {
+
+		try {
+			await fetch(api)
+				.then(res => res.json())
+				.then(data => {
+					let review = data.review;
+					setReviewsCount(review.length)
+				})
+		} catch (error) {
+			console.log(error)
+			setErrorMsg('Opps, Unable to fetch Google Reviews')
+		}
+
+	}
+
+	useEffect(() => {
+		getReviews();
+	});
+
+	var chat = `Hi Code Makers, I want ${productName} Project`;
+
 	return (
 		<Helmet title={productName}>
 
 			<CommonSection title={productName} />
 
-			<section className="pt-0">
+			<section className="pt-0 pb-0">
 				<Container>
 					<Row>
 
 						<Col lg='6' className="prod">
-							<img className="product__img" src={imgUrl} alt="Product Image" />
+							<img className="product__img" src={imgUrl} alt="Product Img" />
 						</Col>
 
 						<Col lg='6'>
 							<div className="product__details">
 								<h2>{productName}</h2>
-								<div className="product__rating d-flex align-items-center gap-5 mb-3">
-									{/* <div>
-										<span><i className="ri-star-s-fill"></i></span>
-										<span><i className="ri-star-s-fill"></i></span>
-										<span><i className="ri-star-s-fill"></i></span>
-										<span><i className="ri-star-half-s-fill"></i></span>
-										<span><i className="ri-star-half-s-fill"></i></span>
-									</div>
-
-									<p>(<span>4.2</span> ratings)</p> */}
+								<div className="product__rating align-items-center gap-5 mb-3">
 									<span>{category} Project</span>
 								</div>
 
@@ -73,13 +86,15 @@ const ProductDetails = () => {
 									<span className="product__price">₹ {price}</span>
 								</div>
 
-								<p className="pt-3">{shortDesc}</p>
+								<p className="pt-3">{objectives}</p>
 
 								{/* <button whileHover={{ scale: 1.04 }} className="buy__btn">
 									Buy via Whatsapp
 								</button> */}
 
-								<a class="dark-btn" href="https://api.whatsapp.com/send/?phone=+917067207547&amp;text=I%20want%20to%20Buy%20Glow-Ui%20template">
+								<a className="dark-btn" rel="noreferrer" target='_blank'
+									href={`${process.env.REACT_APP_WA_LINK}${chat}`}
+								>
 									Buy Via Whatsapp
 								</a>
 							</div>
@@ -89,11 +104,20 @@ const ProductDetails = () => {
 				</Container>
 			</section>
 
-			<section>
+			<section className="mt-0">
 				<Container>
 					<Row>
 
-						<Col lg='12'>
+						<Col lg='12' className="m-content-video">
+							<h1 className="related__title fs-5 mt-0">Project Video</h1>
+							<MediaDesc link={youtubeLink} productName={productName} />
+						</Col>
+
+						<Col lg='12' className="m-content-review">
+							<Reviews count={reviewsCount} />
+						</Col>
+
+						<Col lg='12' className="tabs">
 							<div className="tab__wrapper d-flex align-items-center gap-5">
 								<h6 className={`${tab === 'desc' ? 'active__tab' : ''}`} onClick={() => setTab('desc')}>
 									Description
@@ -101,9 +125,7 @@ const ProductDetails = () => {
 								<h6 className={`${tab === 'med' ? 'active__tab' : ''}`} onClick={() => setTab('med')}>
 									Project Video
 								</h6>
-								<h6 className={`${tab === 'doc' ? 'active__tab' : ''}`} onClick={() => setTab('doc')}>
-									Free Project Document
-								</h6>
+
 								<h6 className={`${tab === 'rev' ? 'active__tab' : ''}`} onClick={() => setTab('rev')}>
 									Review
 								</h6>
@@ -113,29 +135,30 @@ const ProductDetails = () => {
 								tab === 'desc' ?
 
 									<div className="tab__content mt-4">
-										<Description desc={description} />
+										<Description product={product} />
 									</div>
 
-									: tab === 'doc' ?
+									: tab === 'med' ?
 
-										<div className="tab__content mt-4">
-											<DocumentDownload name={productName} />
-										</div>
+										<MediaDesc link={youtubeLink} productName={productName} />
 
-										: tab === 'med' ?
-
-											<MediaDesc link={link} productName={productName} />
-
-											: <Reviews />
+										: <Reviews count={reviewsCount} />
 							}
 
 						</Col>
 
-						<Col lg='12' className="mt-5">
-							<h1 className="related__title mb-4 fs-4">You may also Like</h1>
-						</Col>
+						{
+							relatedProd.length > 0 ?
+								<>
+									<Col lg='12' className="relatedProducts">
+										<h1 className="related__title mb-4 fs-4">Other {category} Projects</h1>
+									</Col>
 
-						<ProductsList data={relatedProd} />
+									<ProductsList data={relatedProd} />
+								</>
+								: <div></div>
+						}
+
 
 					</Row>
 				</Container>
