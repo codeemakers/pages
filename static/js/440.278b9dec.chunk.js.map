@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/440.278b9dec.chunk.js","mappings":"wJAQA,UANiB,WACf,OACD,qCAEA,C","sources":["pages/Checkout.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst Checkout = () => {\r\n  return (\r\n\t<div>Checkout</div>\r\n  )\r\n}\r\n\r\nexport default Checkout"],"names":[],"sourceRoot":""}

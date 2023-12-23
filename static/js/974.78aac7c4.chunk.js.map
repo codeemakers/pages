@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/974.78aac7c4.chunk.js","mappings":"yJAQA,UANiB,WACf,OACC,qCAEF,C","sources":["pages/Download.jsx"],"sourcesContent":["import React from 'react'\r\n\r\nconst Download = () => {\r\n  return (\r\n\t  <div>Download</div>\r\n  )\r\n}\r\n\r\nexport default Download"],"names":[],"sourceRoot":""}
