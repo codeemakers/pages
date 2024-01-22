@@ -6,7 +6,7 @@ const TCPolicy = () => {
 
 	const appName = process.env.REACT_APP_NAME;
 	const address = process.env.REACT_APP_ADDRESS;
-	const email = process.env.REACT_APP_EMAIL;
+	// const email = process.env.REACT_APP_EMAIL;
 
 	return (
 

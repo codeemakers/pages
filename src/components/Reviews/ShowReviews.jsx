@@ -24,7 +24,7 @@ const ShowReviews = () => {
 	const getReviews = async () => {
 
 		try {
-			await fetch(api)
+			await fetch(api, { mode: 'cors', })
 				.then(res => res.json())
 				.then(data => {
 					let review = data.review;
@@ -45,82 +45,82 @@ const ShowReviews = () => {
 
 		<div>
 			{
-					<div div className='testi-container' >
-						{
+				<div div className='testi-container' >
+					{
 
-							errorMsg.length != ''
-								?
-								<div className='mt-4'>
-									<div className="alert alert-danger align-items-center justify-content-center">
+						errorMsg.length !== ''
+							?
+							<div className='mt-4'>
+								<div className="alert alert-danger align-items-center justify-content-center">
 
-										<p className='center fs-5 text-black'>{errorMsg}</p>
-									</div>
-								</div> :
+									<p className='center fs-5 text-black'>{errorMsg}</p>
+								</div>
+							</div> :
 
-								<Swiper
-									slidesPerView={1}
-									spaceBetween={20}
-									autoplay={{
-										delay: 2500,
-										disableOnInteraction: true,
-									}}
-									pagination={{
-										clickable: true,
-									}}
-									modules={[Pagination, Autoplay]}
-									className="mySwiper sectionn testi-container"
-									breakpoints={{
-										640: {
-											slidesPerView: 1,
-											spaceBetween: 20,
-										},
-										768: {
-											slidesPerView: 1,
-											spaceBetween: 20,
-										},
-										1024: {
-											slidesPerView: 2,
-											spaceBetween: 20,
-										},
-									}}
-								>
+							<Swiper
+								slidesPerView={1}
+								spaceBetween={20}
+								autoplay={{
+									delay: 2500,
+									disableOnInteraction: true,
+								}}
+								pagination={{
+									clickable: true,
+								}}
+								modules={[Pagination, Autoplay]}
+								className="mySwiper sectionn testi-container"
+								breakpoints={{
+									640: {
+										slidesPerView: 1,
+										spaceBetween: 20,
+									},
+									768: {
+										slidesPerView: 1,
+										spaceBetween: 20,
+									},
+									1024: {
+										slidesPerView: 2,
+										spaceBetween: 20,
+									},
+								}}
+							>
 
-									<div>
+								<div>
 
-										{/* Carousel Starts */}
-										{
-											reviewData?.map((item, i) => (
-												<SwiperSlide key={i}>
+									{/* Carousel Starts */}
+									{
+										reviewData?.map((item, i) => (
+											<SwiperSlide key={i}>
 
-													<div className="swiper-client-msg">
-														<div>
-															<LongText
-																limit={65}
-																content={item[2]}
-																title={item[1]}
-															/>
-														</div>
+												<div className="swiper-client-msg">
+													<div>
+														<LongText
+															limit={65}
+															content={item[2]}
+															title={item[1]}
+														/>
 													</div>
-													<div className="swiper-client-data grid grid-two-column">
-														<figure className='user-img'>
-															<img src={user} alt="Client Review" />
-														</figure>
-														<div className="client-data-details">
-															<p>{item[1]}</p>
-															<p>Google Review</p>
-														</div>
+												</div>
+												<div className="swiper-client-data grid grid-two-column">
+													<figure className='user-img'>
+														<img src={user} alt="Client Review" />
+													</figure>
+													<div className="client-data-details">
+														<p>{item[1]}</p>
+														<p>Google Review</p>
 													</div>
+												</div>
 
-												</SwiperSlide>
-											))
-										}
+											</SwiperSlide>
+										))
+									}
 
-									</div>
+								</div>
 
-								</Swiper>
+							</Swiper>
 
-						}
-					</div >
+					}
+				</div >
 			}
 		</div>
 	);

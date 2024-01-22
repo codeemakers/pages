@@ -76,7 +76,7 @@ const SearchComponent = ({ isVisible, onClose }) => {
 
 								loading ? (<LoadingComponent />)
 									: data.length === 0
-										? <h1 className="text-center fs-4">No Projects Found!</h1> : searchQuery != ''
+										? <h1 className="text-center fs-4">No Projects Found!</h1> : searchQuery !== ''
 											? <ProductsList data={data} />
 											: <></>
 

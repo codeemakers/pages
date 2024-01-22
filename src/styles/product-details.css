@@ -52,6 +52,7 @@
   object-fit: contain;
   padding: 0;
   margin-top: 60px;
+  width: 90%;
 }
 
 .tab__wrapper {

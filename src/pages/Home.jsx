@@ -1,7 +1,7 @@
 import React, { useState, useEffect, lazy, Suspense } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import { Col, Container, Row } from "reactstrap";
-import { heroImg, counterImg } from '../assets/images/ImagePaths'
+import { heroImg, androidImg } from '../assets/images/ImagePaths'
 import '../styles/home.css'
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion'
@@ -22,7 +22,7 @@ const Home = () => {
   const [data, setData] = useState(products);
 
   useEffect(() => {
-    const completedProducts = products.filter(item => item.category === 'chair');
+    const completedProducts = products.filter(item => item.category === 'PHP');
     setData(completedProducts);
     window.scrollTo(0, 0);
   }, [])
@@ -93,7 +93,7 @@ const Home = () => {
                 <Col lg='6' md='12' className="count__down-col">
                   <div className="clock__top-content text-white">
                     <h4 className="fs-5 mb-4">
-                      20% Discount - All Android Projects
+                      20% Discount on All Android Projects
                     </h4>
                   </div>
                   <Clock />
@@ -104,7 +104,7 @@ const Home = () => {
                 </Col>
 
                 <Col lg='6' md='12' className="text-end counter__img">
-                  <img src={counterImg} alt="Product Img" />
+                  <img src={androidImg} alt="Product Img" />
                 </Col>
               </Row>
             </Container>
@@ -117,7 +117,7 @@ const Home = () => {
         <h2 className="section__title mb-2 pt-4">Our Google Reviews</h2>
         <p className='fs-5 mb-3'>What Students Says</p>
       </center>
-      <Suspense fallback={<div>.</div>}>
+      <Suspense fallback={<div></div>}>
         <ShowReviews />
       </Suspense>
 

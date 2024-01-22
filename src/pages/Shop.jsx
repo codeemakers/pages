@@ -12,7 +12,7 @@ const Shop = () => {
 	const [data, setProductsData] = useState(products);
 	
 	useEffect(()=>{
-		const completedProducts = products.filter(item => item.category === 'sofa' || 'chair' || 'Android');
+		const completedProducts = products.filter(item => item.category === 'Android' || 'PHP' || 'Python' || 'React');
 		setProductsData(completedProducts);
 	}, [])
 
@@ -23,17 +23,22 @@ const Shop = () => {
 		if(filterValue === 'Show') setProductsData(products);
 
 		if(filterValue === 'Android') {
-			const filteredProducts = products.filter(item => item.category === 'sofa')
+			const filteredProducts = products.filter(item => item.category === 'Android')
 			setProductsData(filteredProducts)
 		}
 
 		if(filterValue === 'PHP') {
-			const filteredProducts = products.filter(item => item.category === 'chair')
+			const filteredProducts = products.filter(item => item.category === 'PHP')
 			setProductsData(filteredProducts)
 		}
 
 		if(filterValue === 'Python') {
-			const filteredProducts = products.filter(item => item.category === 'mobile')
+			const filteredProducts = products.filter(item => item.category === 'Python')
+			setProductsData(filteredProducts)
+		}
+
+		if(filterValue === 'React') {
+			const filteredProducts = products.filter(item => item.category === 'React')
 			setProductsData(filteredProducts)
 		}
 	};
@@ -67,6 +72,7 @@ const Shop = () => {
 									<option value='Show'>Show All</option>
 									<option value='Android'>Android</option>
 									<option value='PHP'>PHP</option>
+									<option value='React'>React</option>
 									<option value='Python'>Python</option>
 								</select>
 							</div>

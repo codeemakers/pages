@@ -34,11 +34,14 @@
 	background: var(--primary-color);
 	height: 300px;
 }
-.timer__count img{
-	width: 70% !important;
+.timer__count .counter__img img {
+	background: #fff;
 	height: 70% !important;
+	width: 70% !important;
+	border-radius: 18px;
 	object-fit: contain;
 }
+
 .store__btn{
 	background: #fff;
 	color: var(--primary-color);
