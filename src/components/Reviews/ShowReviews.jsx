@@ -11,8 +11,8 @@ import 'swiper/css/pagination';
 // import required modules
 import { Pagination, Autoplay } from 'swiper/modules';
 
-import { user } from '../../assets/images/ImagePaths'
 import LongText from '../UI/TextLength';
+import Stars from '../UI/Stars';
 
 const ShowReviews = () => {
 
@@ -41,6 +41,20 @@ const ShowReviews = () => {
 		getReviews();
 	});
 
+	// Function to convert words to numbers
+	const convertWordToNumber = word => {
+		const wordMap = {
+			ONE: 1,
+			TWO: 2,
+			THREE: 3,
+			FOUR: 4,
+			FIVE: 5
+			// Add more mappings as needed
+		};
+
+		return wordMap[word] || 1; // Default to 1 if the word is not found in the map
+	};
+
 	return (
 
 		<div>
@@ -48,7 +62,7 @@ const ShowReviews = () => {
 				<div div className='testi-container' >
 					{
 
-						errorMsg.length !== ''
+						errorMsg.length != ''
 							?
 							<div className='mt-4'>
 								<div className="alert alert-danger align-items-center justify-content-center">
@@ -90,28 +104,31 @@ const ShowReviews = () => {
 									{/* Carousel Starts */}
 									{
 										reviewData?.map((item, i) => (
-											<SwiperSlide key={i}>
 
-												<div className="swiper-client-msg">
-													<div>
-														<LongText
-															limit={65}
-															content={item[2]}
-															title={item[1]}
-														/>
-													</div>
-												</div>
-												<div className="swiper-client-data grid grid-two-column">
-													<figure className='user-img'>
-														<img src={user} alt="Client Review" />
-													</figure>
-													<div className="client-data-details">
-														<p>{item[1]}</p>
-														<p>Google Review</p>
-													</div>
-												</div>
+											item[4] === 'YES' ?
+												<SwiperSlide key={i}>
 
-											</SwiperSlide>
+													<div className="swiper-client-msg">
+														<div>
+															<LongText
+																limit={65}
+																content={item[2]}
+																title={item[1]}
+															/>
+														</div>
+													</div>
+													<div className="swiper-client-data grid grid-two-column">
+														<div className="client-data-details">
+															<p>{item[1]}</p>
+														</div>
+														<figure className="review__star">
+															<Stars
+																stars={convertWordToNumber(item[3])}
+															/>
+														</figure>
+													</div>
+
+												</SwiperSlide> : null
 										))
 									}
 

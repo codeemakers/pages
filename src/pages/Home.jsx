@@ -115,7 +115,7 @@ const Home = () => {
       {/* Reviews Section */}
       <center>
         <h2 className="section__title mb-2 pt-4">Our Google Reviews</h2>
-        <p className='fs-5 mb-3'>What Students Says</p>
+        <p className='fs-5 mb-4'>What Students Says</p>
       </center>
       <Suspense fallback={<div></div>}>
         <ShowReviews />

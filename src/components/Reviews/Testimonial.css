@@ -98,6 +98,12 @@ section {
   align-items: center;
   margin-top: 1rem;
   gap: 3.2rem;
+  margin-bottom: 1.6rem;
+}
+
+.review__star {
+  color: orange;
+  font-size: 1.6rem;
 }
 
 /* Responsive Styling */
@@ -125,5 +131,9 @@ section {
   }
   .swiper-client-msg div::before {
     content: "";
+  }
+  .review__star {
+    color: orange;
+    font-size: 1.2rem;
   }
 }

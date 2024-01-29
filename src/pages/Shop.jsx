@@ -10,8 +10,8 @@ import ProductsList from '../components/UI/ProductsList'
 const Shop = () => {
 
 	const [data, setProductsData] = useState(products);
-	
-	useEffect(()=>{
+
+	useEffect(() => {
 		const completedProducts = products.filter(item => item.category === 'Android' || 'PHP' || 'Python' || 'React');
 		setProductsData(completedProducts);
 	}, [])
@@ -20,24 +20,24 @@ const Shop = () => {
 
 		const filterValue = e.target.value
 
-		if(filterValue === 'Show') setProductsData(products);
+		if (filterValue === 'Show') setProductsData(products);
 
-		if(filterValue === 'Android') {
+		if (filterValue === 'Android') {
 			const filteredProducts = products.filter(item => item.category === 'Android')
 			setProductsData(filteredProducts)
 		}
 
-		if(filterValue === 'PHP') {
+		if (filterValue === 'PHP') {
 			const filteredProducts = products.filter(item => item.category === 'PHP')
 			setProductsData(filteredProducts)
 		}
 
-		if(filterValue === 'Python') {
+		if (filterValue === 'Python') {
 			const filteredProducts = products.filter(item => item.category === 'Python')
 			setProductsData(filteredProducts)
 		}
 
-		if(filterValue === 'React') {
+		if (filterValue === 'React') {
 			const filteredProducts = products.filter(item => item.category === 'React')
 			setProductsData(filteredProducts)
 		}
@@ -51,6 +51,26 @@ const Shop = () => {
 		setProductsData(searchedProduct)
 	};
 
+	const handleSort = (e) => {
+		const sortValue = e.target.value;
+
+		if (sortValue === 'Show') {
+			// Show all products without sorting
+			setProductsData([...products]);
+		} else {
+			const sortedProducts = [...products].sort((a, b) => {
+				if (sortValue === 'ascending') {
+					return a.price - b.price;
+				} else if (sortValue === 'descending') {
+					return b.price - a.price;
+				}
+				return 0; // Default case
+			});
+
+			setProductsData(sortedProducts);
+		}
+	};
+
 	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, []);
@@ -58,7 +78,7 @@ const Shop = () => {
 	return (
 
 		<Helmet title='Shop'>
-			
+
 			<CommonSection title={'Shop'} />
 
 			<section className="slider">
@@ -80,10 +100,11 @@ const Shop = () => {
 
 						<Col lg='3' md='6' className="sort text-end">
 							<div className="filter__widget">
-								<select>
-									<option>Sort By</option>
-									<option value='ascending'>Ascending</option>
-									<option value='descending'>Descending</option>
+								<select onChange={handleSort}>
+									<option>Sort by price</option>
+									<option value='Show'>Show All</option>
+									<option value='ascending'>Low to High</option>
+									<option value='descending'>High to Low</option>
 								</select>
 							</div>
 						</Col>
@@ -103,7 +124,7 @@ const Shop = () => {
 				<Container>
 					<Row>
 						{
-							data.length === 0 
+							data.length === 0
 								? <h1 className="text-center fs-4">No Projects Found!</h1>
 								: <ProductsList data={data} />
 						}

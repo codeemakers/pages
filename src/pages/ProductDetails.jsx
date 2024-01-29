@@ -7,7 +7,6 @@ import CommonSection from "../components/UI/CommonSection";
 import ProductsList from "../components/UI/ProductsList";
 import '../styles/product-details.css'
 import MediaDesc from "./Description/MediaDesc";
-
 import Description from "./Description/Description";
 import products from "../assets/data/products";
 import Reviews from "./Description/WriteReviews";
@@ -15,6 +14,7 @@ import Reviews from "./Description/WriteReviews";
 const ProductDetails = () => {
 
 	const [reviewsCount, setReviewsCount] = useState();
+	const [avgStar, setAvgStar] = useState();
 	const [errorMsg, setErrorMsg] = useState('');
 	const api = process.env.REACT_APP_TEST_SHEETAPI
 
@@ -39,6 +39,19 @@ const ProductDetails = () => {
 		window.scrollTo(0, 0);
 	}, [product]);
 
+	// Function to convert words to numbers
+	const convertWordToNumber = word => {
+		const wordMap = {
+			ONE: 1,
+			TWO: 2,
+			THREE: 3,
+			FOUR: 4,
+			FIVE: 5
+			// Add more mappings as needed
+		};
+
+		return wordMap[word] || 1; // Default to 1 if the word is not found in the map
+	};
 
 	const getReviews = async () => {
 
@@ -48,10 +61,29 @@ const ProductDetails = () => {
 				.then(data => {
 					let review = data.review;
 					setReviewsCount(review.length)
+
+					// Convert words to numbers and calculate the average
+					let sum = 0;
+					review.forEach(reviews => {
+						// Assuming the numbers in words are at index 3
+						const numberInWords = reviews[3].toUpperCase(); // Ensure all words are in uppercase for consistency
+
+						// Convert words to numbers
+						const number = convertWordToNumber(numberInWords);
+
+						// Add the number to the sum
+						sum += number;
+					});
+
+					// Calculate the average
+					const average = (sum / review.length).toFixed(1);
+
+					// Set the average in the state
+					setAvgStar(average);
 				})
 		} catch (error) {
 			console.log(error)
-			setErrorMsg('Opps, Unable to fetch Google Reviews')
+			setErrorMsg('Network error while fetching the reviews')
 		}
 
 	}
@@ -142,7 +174,7 @@ const ProductDetails = () => {
 
 										<MediaDesc link={youtubeLink} productName={productName} />
 
-										: <Reviews count={reviewsCount} />
+										: <Reviews count={reviewsCount} avgStar={avgStar} error={errorMsg} />
 							}
 
 						</Col>
@@ -159,13 +191,13 @@ const ProductDetails = () => {
 								: <div></div>
 						}
 
-
 					</Row>
 				</Container>
 			</section>
 
 		</Helmet>
 	);
+
 };
 
 export default ProductDetails;
