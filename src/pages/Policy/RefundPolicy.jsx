@@ -40,7 +40,7 @@ const RefundPolicy = () => {
 				<h5 className="section__title mt-3">Cancellation Policy</h5>
 
 				<h6 className="mt-3">
-					No cancellation, after order is placed. Code Shoppy delivery instant download feature of source code which make customer services faster.
+					No cancellation, after order is placed. Code Makers delivery instant download feature of source code which make customer services faster.
 				</h6>
 
 			</section>
