@@ -1,9 +1,7 @@
 import React, { useEffect, useRef, useState, lazy, Suspense } from 'react'
 import './header.css'
-import { logo, userIcon } from '../../assets/images/ImagePaths'
 import { Container, Row } from 'reactstrap'
-import { NavLink, Link } from 'react-router-dom';
-import { motion } from 'framer-motion'
+import { NavLink } from 'react-router-dom';
 import LoadingComponent from '../Loading/LoadingComponent';
 
 const SearchComponent = lazy(() => import("../Search/SearchComponent"));

@@ -3,7 +3,7 @@ import CustomModal from "./Modal";
 
 
 const TextLength = ({ content, limit, title }) => {
-	const [showAll, setShowAll] = useState(false);
+	// const [showAll, setShowAll] = useState(false);
 
 	const [showComponent, setShowComponent] = useState(false);
 
@@ -12,8 +12,8 @@ const TextLength = ({ content, limit, title }) => {
 		// setShowComponent(false);
 	}
 
-	const showMore = () => setShowAll(true);
-	const showLess = () => setShowAll(false);
+	// const showMore = () => setShowAll(true);
+	// const showLess = () => setShowAll(false);
 
 	if (content.length <= limit) {
 		// there is nothing more to show

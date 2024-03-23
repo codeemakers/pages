@@ -18,7 +18,7 @@ const ShowReviews = () => {
 
 	const [reviewData, setReviewData] = useState();
 	const [errorMsg, setErrorMsg] = useState('');
-	const [loading, setLoading] = useState(false);
+	// const [loading, setLoading] = useState(false);
 	const api = process.env.REACT_APP_SHEETAPI;
 
 	const getReviews = async () => {
