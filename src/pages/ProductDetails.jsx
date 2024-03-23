@@ -16,7 +16,7 @@ const ProductDetails = () => {
 	const [reviewsCount, setReviewsCount] = useState();
 	const [avgStar, setAvgStar] = useState();
 	const [errorMsg, setErrorMsg] = useState('');
-	const api = process.env.REACT_APP_TEST_SHEETAPI
+	const api = process.env.REACT_APP_SHEETAPI
 
 	const [tab, setTab] = useState('desc')
 
@@ -50,7 +50,7 @@ const ProductDetails = () => {
 			// Add more mappings as needed
 		};
 
-		return wordMap[word] || 1; // Default to 1 if the word is not found in the map
+		return wordMap[word] || 0; // Default to 1 if the word is not found in the map
 	};
 
 	const getReviews = async () => {
@@ -146,7 +146,7 @@ const ProductDetails = () => {
 						</Col>
 
 						<Col lg='12' className="m-content-review">
-							<Reviews count={reviewsCount} />
+							<Reviews count={reviewsCount} error={errorMsg} avgStar={avgStar} />
 						</Col>
 
 						<Col lg='12' className="tabs">

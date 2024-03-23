@@ -19,7 +19,7 @@ const ShowReviews = () => {
 	const [reviewData, setReviewData] = useState();
 	const [errorMsg, setErrorMsg] = useState('');
 	const [loading, setLoading] = useState(false);
-	const api = process.env.REACT_APP_TEST_SHEETAPI;
+	const api = process.env.REACT_APP_SHEETAPI;
 
 	const getReviews = async () => {
 
@@ -62,7 +62,7 @@ const ShowReviews = () => {
 				<div div className='testi-container' >
 					{
 
-						errorMsg.length != ''
+						errorMsg.length !== ''
 							?
 							<div className='mt-4'>
 								<div className="alert alert-danger align-items-center justify-content-center">

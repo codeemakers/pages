@@ -1,6 +1,6 @@
 // ==================== Image Imports ============================
 import {
-  jarvis, 
+  jarvis,
   apkColorFinder,
   apkPetShop,
   webArtStore,
@@ -47,7 +47,7 @@ const products = [
       }
     ],
 
-    documentLink: 'drive.com',
+    documentLink: 'https://drive.google.com/file/d/14CMvO9L_MxV5zKDpT1UBlwXwm4KYLX9b/view?usp=sharingdrive.com',
     youtubeLink: 'https://www.youtube.com/embed/mB8ajdvRnC0?si=KQaQ5s2vm_ffVBfu',
   },
 
@@ -95,7 +95,7 @@ const products = [
     imgUrl: apkColorFinder,
     category: "Android",
     price: 173,
-    
+
     abstract: 'Online Pet Shop is an Android application where the purchase and sale of pets took place. Thus this website provides a platform where the users could buy or sell pets by providing the contact details of the buyers/sellers. Our project also includes a special feature for buying street dogs through the app whereas its maintenance and operation are carried out by different non-government organizations [NGO] through a website. Through this, we desire to contribute something for reducing the count of street dogs in public places. We are building this web application in a way that we create a login for all users. Thus this app makes a perfect choice for the ones who loves pets and seeks variant breeds of them.',
 
     objectives: "This application ‘Online Pet Store’ is a platform for buying and selling different categories of pets. This project also enables NGO's to advertise their campaigns. Through this project, users can directly contact the buyer/seller so that they are benefited by removing the commission fee paid to agents while buying their favoured pets.",
@@ -131,7 +131,7 @@ const products = [
     imgUrl: webInterior,
     category: "PHP",
     price: 3000,
-    
+
     abstract: 'Online Pet Shop is an Android application where the purchase and sale of pets took place. Thus this website provides a platform where the users could buy or sell pets by providing the contact details of the buyers/sellers. Our project also includes a special feature for buying street dogs through the app whereas its maintenance and operation are carried out by different non-government organizations [NGO] through a website. Through this, we desire to contribute something for reducing the count of street dogs in public places. We are building this web application in a way that we create a login for all users. Thus this app makes a perfect choice for the ones who loves pets and seeks variant breeds of them.',
 
     objectives: "This application ‘Online Pet Store’ is a platform for buying and selling different categories of pets. This project also enables NGO's to advertise their campaigns. Through this project, users can directly contact the buyer/seller so that they are benefited by removing the commission fee paid to agents while buying their favoured pets.",
@@ -167,7 +167,7 @@ const products = [
     imgUrl: webPortfolio,
     category: "PHP",
     price: 3000,
-    
+
     abstract: 'Online Pet Shop is an Android application where the purchase and sale of pets took place. Thus this website provides a platform where the users could buy or sell pets by providing the contact details of the buyers/sellers. Our project also includes a special feature for buying street dogs through the app whereas its maintenance and operation are carried out by different non-government organizations [NGO] through a website. Through this, we desire to contribute something for reducing the count of street dogs in public places. We are building this web application in a way that we create a login for all users. Thus this app makes a perfect choice for the ones who loves pets and seeks variant breeds of them.',
 
     objectives: "This application ‘Online Pet Store’ is a platform for buying and selling different categories of pets. This project also enables NGO's to advertise their campaigns. Through this project, users can directly contact the buyer/seller so that they are benefited by removing the commission fee paid to agents while buying their favoured pets.",
@@ -203,7 +203,7 @@ const products = [
     imgUrl: webExam,
     category: "PHP",
     price: 4000,
-    
+
     abstract: 'Online Pet Shop is an Android application where the purchase and sale of pets took place. Thus this website provides a platform where the users could buy or sell pets by providing the contact details of the buyers/sellers. Our project also includes a special feature for buying street dogs through the app whereas its maintenance and operation are carried out by different non-government organizations [NGO] through a website. Through this, we desire to contribute something for reducing the count of street dogs in public places. We are building this web application in a way that we create a login for all users. Thus this app makes a perfect choice for the ones who loves pets and seeks variant breeds of them.',
 
     objectives: "This application ‘Online Pet Store’ is a platform for buying and selling different categories of pets. This project also enables NGO's to advertise their campaigns. Through this project, users can directly contact the buyer/seller so that they are benefited by removing the commission fee paid to agents while buying their favoured pets.",
@@ -239,7 +239,7 @@ const products = [
     imgUrl: webArtStore,
     category: "React",
     price: 5000,
-    
+
     abstract: 'Online Pet Shop is an Android application where the purchase and sale of pets took place. Thus this website provides a platform where the users could buy or sell pets by providing the contact details of the buyers/sellers. Our project also includes a special feature for buying street dogs through the app whereas its maintenance and operation are carried out by different non-government organizations [NGO] through a website. Through this, we desire to contribute something for reducing the count of street dogs in public places. We are building this web application in a way that we create a login for all users. Thus this app makes a perfect choice for the ones who loves pets and seeks variant breeds of them.',
 
     objectives: "This application ‘Online Pet Store’ is a platform for buying and selling different categories of pets. This project also enables NGO's to advertise their campaigns. Through this project, users can directly contact the buyer/seller so that they are benefited by removing the commission fee paid to agents while buying their favoured pets.",

@@ -8,11 +8,10 @@ const WriteReviews = ({ count, avgStar, error }) => {
 
 	return (
 
-		error != ''
+		error !== ''
 			?
 			<div className='mt-4'>
 				<div className="alert alert-danger align-items-center justify-content-center">
-
 					<p className='center fs-5 text-black'>{error}</p>
 				</div>
 			</div> :
