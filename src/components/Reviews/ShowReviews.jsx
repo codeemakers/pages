@@ -62,7 +62,7 @@ const ShowReviews = () => {
 				<div div className='testi-container' >
 					{
 
-						errorMsg.length !== ''
+						errorMsg !== ''
 							?
 							<div className='mt-4'>
 								<div className="alert alert-danger align-items-center justify-content-center">

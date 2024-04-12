@@ -52,6 +52,7 @@ const SearchComponent = ({ isVisible, onClose }) => {
 						type="text"
 						className="home-search-input"
 						placeholder="Search for projects"
+						autoComplete='off'
 						onChange={handleSearch}
 						name='search__field'
 						style={{ pointerEvents: isVisible ? 'auto' : 'none' }}

@@ -60,10 +60,10 @@ const ProductDetails = () => {
 				.then(res => res.json())
 				.then(data => {
 					let review = data.review;
-					setReviewsCount(review.length)
 
 					// Convert words to numbers and calculate the average
 					let sum = 0;
+					let count = 0; // Counter for the number of valid reviews
 					review.forEach(reviews => {
 						// Assuming the numbers in words are at index 3
 						const numberInWords = reviews[3].toUpperCase(); // Ensure all words are in uppercase for consistency
@@ -71,14 +71,19 @@ const ProductDetails = () => {
 						// Convert words to numbers
 						const number = convertWordToNumber(numberInWords);
 
-						// Add the number to the sum
-						sum += number;
+						if (number !== 0) {
+							sum += number;
+							count++;
+						}
+
 					});
 
 					// Calculate the average
-					const average = (sum / review.length).toFixed(1);
+					// const average = (sum / review.length).toFixed(1);
+					const average = count > 0 ? (sum / count).toFixed(1) : 0;
 
-					// Set the average in the state
+					// Set the average and the average in the state
+					setReviewsCount(count)
 					setAvgStar(average);
 				})
 		} catch (error) {

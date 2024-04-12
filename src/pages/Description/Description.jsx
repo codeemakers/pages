@@ -1,7 +1,6 @@
 import React from 'react'
 import './media-desc.css'
 import DocumentDownload from './DocumentDownload';
-import { faq } from '../../assets/images/ImagePaths';
 
 const Description = ({ product }) => {
 
@@ -19,7 +18,7 @@ const Description = ({ product }) => {
 
 				<DocumentDownload product={product} />
 
-				<img src={faq} alt="" className='faq__img' />
+				{/* <img src={faq} alt="" className='faq__img' /> */}
 
 				{/* <h5 className="section__title mt-4">Objectives</h5>
 				<h6 className='mt-3'>{product.objectives}</h6> */}

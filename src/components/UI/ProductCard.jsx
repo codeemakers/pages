@@ -4,7 +4,10 @@ import '../../styles/product-card.css';
 import { Col } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
 
+
 const ProductCard = ({ item }) => {
+
+	const searchProjectOnClick = () => setTimeout(() => window.location.reload(), 500);
 
 	return (
 
@@ -13,7 +16,7 @@ const ProductCard = ({ item }) => {
 
 				<div className="product__item">
 					<div className="product__img">
-						<NavLink to={`/shop/${item.id}`} >
+						<NavLink to={`/shop/${item.id}`} onClick={searchProjectOnClick}>
 							<motion.img whileHover={{ scale: 0.9 }} src={item.imgUrl} alt="" />
 						</NavLink>
 
