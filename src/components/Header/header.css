@@ -140,18 +140,16 @@ h3{
 	.mobile__menu span i{
 		font-size: 1.4rem !important;
 	}
-	
-	.logo img{
-		width: 1.2rem;
-		height: 1.2rem;
-	}
+
 	.logo h1{
 		font-size: 1.1rem;
 	}
 
-	.nav__icons .fav__icon, .logo img {
+	/* ~~~~~~~~~~~~~~~~~~ */
+	.nav__icons .wa__icon {
 		display: none;
 	}
+	/* ~~~~~~~~~~~~~~~~~~ */
 
 	.wa__icon i{
 		font-size: 1.4rem !important;

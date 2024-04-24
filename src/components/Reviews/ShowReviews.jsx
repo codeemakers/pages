@@ -59,18 +59,11 @@ const ShowReviews = () => {
 
 		<div>
 			{
-				<div div className='testi-container' >
+				<div className='testi-container' >
 					{
 
-						errorMsg !== ''
+						errorMsg === ''
 							?
-							<div className='mt-4'>
-								<div className="alert alert-danger align-items-center justify-content-center">
-
-									<p className='center fs-5 text-black'>{errorMsg}</p>
-								</div>
-							</div> :
-
 							<Swiper
 								slidesPerView={1}
 								spaceBetween={20}
@@ -98,44 +91,46 @@ const ShowReviews = () => {
 									},
 								}}
 							>
+								{/* Carousel Starts */}
+								{
+									reviewData?.map((item, i) => {
 
-								<div>
+										if (item[4] === true) {
 
-									{/* Carousel Starts */}
-									{
-										reviewData?.map((item, i) => (
-
-											item[4] === 'YES' ?
-												<SwiperSlide key={i}>
-
-													<div className="swiper-client-msg">
-														<div>
-															<LongText
-																limit={65}
-																content={item[2]}
-																title={item[1]}
-															/>
-														</div>
+											return <SwiperSlide key={i}>
+												<div className="swiper-client-msg">
+													<div>
+														<LongText
+															limit={65}
+															content={item[2]}
+															title={item[1]}
+														/>
 													</div>
-													<div className="swiper-client-data grid grid-two-column">
-														<div className="client-data-details">
-															<p>{item[1]}</p>
-														</div>
-														<figure className="review__star">
-															<Stars
-																stars={convertWordToNumber(item[3])}
-															/>
-														</figure>
+												</div>
+												<div className="swiper-client-data grid grid-two-column">
+													<div className="client-data-details">
+														<p>{item[1]}</p>
 													</div>
+													<figure className="review__star">
+														<Stars
+															stars={convertWordToNumber(item[3])}
+														/>
+													</figure>
+												</div>
 
-												</SwiperSlide> : null
-										))
-									}
-
-								</div>
+											</SwiperSlide>;
+										}
+										return null;
+									})
+								}
 
 							</Swiper>
-
+							:
+							<div className='mt-4'>
+								<div className="alert alert-danger align-items-center justify-content-center">
+									<p className='center fs-5 text-black'>{errorMsg}</p>
+								</div>
+							</div>
 					}
 				</div >
 			}

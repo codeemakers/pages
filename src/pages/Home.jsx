@@ -22,7 +22,7 @@ const Home = () => {
   const [data, setData] = useState(products);
 
   useEffect(() => {
-    const completedProducts = products.filter(item => item.category === 'PHP');
+    const completedProducts = products.filter(item => item.category === 'Android');
     setData(completedProducts);
     window.scrollTo(0, 0);
   }, [])
@@ -77,7 +77,7 @@ const Home = () => {
         <Container className="mt-0">
           <Row>
             <Col lg='12' className="text-center">
-              <h2 className="section__title mb-4">Completed Projects</h2>
+              <h2 className="section__title mb-4">Trending Projects</h2>
             </Col>
             <ProductList data={data} />
           </Row>
@@ -117,7 +117,7 @@ const Home = () => {
         <h2 className="section__title mb-2 pt-4">Our Google Reviews</h2>
         <p className='fs-5 mb-4'>What Students Says</p>
       </center>
-      <Suspense fallback={<div></div>}>
+      <Suspense fallback={<div>Loading...</div>}>
         <ShowReviews />
       </Suspense>
 

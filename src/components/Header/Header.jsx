@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState, lazy, Suspense } from 'react'
 import './header.css'
 import { Container, Row } from 'reactstrap'
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import LoadingComponent from '../Loading/LoadingComponent';
 
 const SearchComponent = lazy(() => import("../Search/SearchComponent"));
@@ -80,7 +80,9 @@ const Header = () => {
 							<div className="logo">
 								{/* <img src={logo} alt='Logo' /> */}
 								<div>
-									<h1>Code Makers</h1>
+									<NavLink to={'/'}>
+										<h1>Code Makers</h1>
+									</NavLink>
 									{/* <p>Since 1990</p> */}
 								</div>
 							</div>

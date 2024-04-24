@@ -123,11 +123,11 @@ const products = [
     youtubeLink: 'https://www.youtube.com/embed/mB8ajdvRnC0?si=KQaQ5s2vm_ffVBfu',
   },
 
-  // ================= Interior Design Webiste ======================
+  // ================= Interior Design Website ======================
 
   {
     id: "G1104",
-    productName: "Interior Design Webiste",
+    productName: "Interior Design Website",
     imgUrl: webInterior,
     category: "PHP",
     price: 3000,
@@ -155,15 +155,15 @@ const products = [
       }
     ],
 
-    documentLink: 'drive.com',
+    documentLink: 'https://drive.google.com/file/d/1TZuzci1KnuBGwNu9jsQmtd6AYvbqB_uf/view?usp=drive_link',
     youtubeLink: 'https://www.youtube.com/embed/mB8ajdvRnC0?si=KQaQ5s2vm_ffVBfu',
   },
 
-  // ================= Photographer Portfolio Webiste ======================
+  // ================= Photographer Portfolio Website ======================
 
   {
     id: "G1105",
-    productName: "Photographer Portfolio Webiste",
+    productName: "Photographer Portfolio Website",
     imgUrl: webPortfolio,
     category: "PHP",
     price: 3000,

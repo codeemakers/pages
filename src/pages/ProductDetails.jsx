@@ -145,6 +145,7 @@ const ProductDetails = () => {
 				<Container>
 					<Row>
 
+						{/* Mobile Content  */}
 						<Col lg='12' className="m-content-video">
 							<h1 className="related__title fs-5 mt-0">Project Video</h1>
 							<MediaDesc link={youtubeLink} productName={productName} />
@@ -154,6 +155,7 @@ const ProductDetails = () => {
 							<Reviews count={reviewsCount} error={errorMsg} avgStar={avgStar} />
 						</Col>
 
+						{/* Desktop Content */}
 						<Col lg='12' className="tabs">
 							<div className="tab__wrapper d-flex align-items-center gap-5">
 								<h6 className={`${tab === 'desc' ? 'active__tab' : ''}`} onClick={() => setTab('desc')}>
