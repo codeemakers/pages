@@ -150,6 +150,32 @@ textarea :focus {
   background: #f9f9f9;
 }
 
+/* Schedule Maintanence CSS Code */
+.maintenance-container {
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.maintenance-content {
+  text-align: center;
+}
+
+.maintenance-message {
+  margin-top: 10px;
+  line-height: 140%;
+}
+
+@media (min-width: 768px) {
+  .maintenance-container {
+    max-width: 65%; /* Adjust the max-width as needed for desktop screens */
+    width: 100%;
+  }
+}
+
 /* Responsive Styling */
 @media only screen and (max-width: 768px) {
   section {

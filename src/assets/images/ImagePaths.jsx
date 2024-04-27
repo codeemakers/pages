@@ -11,6 +11,8 @@ import qoute from './quote.png'
 import reviewGirl from './review.png'
 import user from './user.png'
 import faq from './faq.png'
+import down from './down.png'
+import maintanence from './maintanence.json'
 
 // ================ Project Images ==========================
 import apkColorFinder from '../proj_images/apkColorFinder.png'
@@ -37,6 +39,8 @@ export {
 	reviewGirl,
 	user,
 	faq,
+	down,
+	maintanence,
 
 	// ================ Project Images ==========================
 	apkColorFinder,
