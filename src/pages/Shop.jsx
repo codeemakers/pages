@@ -12,7 +12,7 @@ const Shop = () => {
 	const [data, setProductsData] = useState(products);
 
 	useEffect(() => {
-		const completedProducts = products.filter(item => item.category === 'Android' || 'PHP' || 'Python' || 'React');
+		const completedProducts = products.filter(item => item.category === 'Android' || 'PHP' || 'Python' || 'React JS');
 		setProductsData(completedProducts);
 	}, [])
 
@@ -37,8 +37,8 @@ const Shop = () => {
 			setProductsData(filteredProducts)
 		}
 
-		if (filterValue === 'React') {
-			const filteredProducts = products.filter(item => item.category === 'React')
+		if (filterValue === 'React JS') {
+			const filteredProducts = products.filter(item => item.category === 'React JS')
 			setProductsData(filteredProducts)
 		}
 	};
@@ -92,7 +92,7 @@ const Shop = () => {
 									<option value='Show'>Show All</option>
 									<option value='Android'>Android</option>
 									<option value='PHP'>PHP</option>
-									<option value='React'>React</option>
+									<option value='React JS'>React JS</option>
 									<option value='Python'>Python</option>
 								</select>
 							</div>

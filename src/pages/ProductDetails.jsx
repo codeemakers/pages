@@ -10,6 +10,7 @@ import MediaDesc from "./Description/MediaDesc";
 import Description from "./Description/Description";
 import products from "../assets/data/products";
 import Reviews from "./Description/WriteReviews";
+import { getRandomProjects } from "../redux/randomProjects";
 
 const ProductDetails = () => {
 
@@ -33,7 +34,7 @@ const ProductDetails = () => {
 		youtubeLink
 	} = product
 
-	const relatedProd = products.filter((item) => item.category === category);
+	const relatedProd = getRandomProjects(products, category, 4, id);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);

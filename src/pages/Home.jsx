@@ -1,4 +1,4 @@
-import React, { useState, useEffect, lazy, Suspense } from "react";
+import React, { useEffect, lazy, Suspense } from "react";
 import Helmet from "../components/Helmet/Helmet";
 import { Col, Container, Row } from "reactstrap";
 import { heroImg, androidImg } from '../assets/images/ImagePaths'
@@ -12,6 +12,7 @@ import ProductList from "../components/UI/ProductsList";
 import Clock from "../components/UI/Clock";
 import products from '../assets/data/products'
 import CustomProject from "../components/Custom/CustomProject";
+import { getTrendingProjects } from "../redux/randomProjects";
 
 const ShowReviews = lazy(() => import("../components/Reviews/ShowReviews"));
 
@@ -19,11 +20,10 @@ const ShowReviews = lazy(() => import("../components/Reviews/ShowReviews"));
 const Home = () => {
 
   const year = new Date().getFullYear();
-  const [data, setData] = useState(products);
+
+  const projects = getTrendingProjects(products, process.env.REACT_APP_TRENDING_CAT, 4)
 
   useEffect(() => {
-    const completedProducts = products.filter(item => item.category === 'Android');
-    setData(completedProducts);
     window.scrollTo(0, 0);
   }, [])
 
@@ -79,7 +79,7 @@ const Home = () => {
             <Col lg='12' className="text-center">
               <h2 className="section__title mb-4">Trending Projects</h2>
             </Col>
-            <ProductList data={data} />
+            <ProductList data={projects} />
           </Row>
         </Container>
       </section>

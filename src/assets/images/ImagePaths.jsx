@@ -11,7 +11,6 @@ import qoute from './quote.png'
 import reviewGirl from './review.png'
 import user from './user.png'
 import faq from './faq.png'
-import down from './down.png'
 import maintanence from './maintanence.json'
 
 // ================ Project Images ==========================
@@ -24,6 +23,7 @@ import webInterior from '../proj_images/webInterior.png'
 import webPetShop from '../proj_images/webPetShop.png'
 import webPortfolio from '../proj_images/webPortfolio.png'
 import jarvis from '../proj_images/jarvis.png'
+import onRoad from '../proj_images/onRoad.png'
 
 export {
 	logo,
@@ -39,9 +39,8 @@ export {
 	reviewGirl,
 	user,
 	faq,
-	down,
 	maintanence,
-
+	
 	// ================ Project Images ==========================
 	apkColorFinder,
 	apkPetShop,
@@ -51,5 +50,6 @@ export {
 	webInterior,
 	webPetShop,
 	webPortfolio,
-	jarvis
+	jarvis,
+	onRoad,
 };
