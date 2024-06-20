@@ -10,7 +10,7 @@
 		What you will Get Modal,
 		Project Images,
 		Compare and check content of whole website,
-		Search Component Clickable,
+		Search Component Clickable, [ it's done ]
 		Check all the pages is helmet applied,
 		Update whatsapp number and link to the respective pages,
 	}
